@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ADXDOC PNA="S300STCRM" NAM="OBPD" TIM="20260603210328" OBJ="BPD" INV="1" FOL="SEED" SOL="X3ERPV12" 
+WRP="WJS300STCRM" USER="ERPUS" VER="6.30" HEAD="1">
+ <ADXDATA>
+<GRP NAM="BPD0_1" TYB="List" DIM="1">
+<FLD NAM="BPCNUM" X3BLORIG="BPD0_1" X3FLORIG="BPCNUM" IDX="1" TYP="Char" MOD="Input" LEN="15" 
+C_FRA="Client" C_ENG="Customer" C_ITA="Cliente" C_POR="Cliente" C_SPA="Cliente" C_BRI="Customer" 
+C_GER="Kunde" C_POL="Klient" C_CHI="客户" C_ARB="زبون  رقم شريك العمل" C_AUS="Customer"/>
+<FLD NAM="ZBPCNUM" X3BLORIG="BPD0_1" X3FLORIG="ZBPCNUM" IDX="2" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="BPAADD" X3BLORIG="BPD0_1" X3FLORIG="BPAADD" IDX="3" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Adresse liv" C_ENG="Deliv address" C_ITA="Indirizzo spediz.ne" C_POR="End. exped." 
+C_SPA="Dirección ent." C_BRI="Ship-to Address" C_GER="Lieferadresse" C_POL="Adres wysyłki" C_CHI="发货地址" 
+C_ARB="عنوان التسليم" C_AUS="Deliv address"/>
+<FLD NAM="SOC" X3BLORIG="BPD0_1" X3FLORIG="SOC" IDX="4" TYP="Char" MOD="Hidden" LEN="5" C_FRA="Société" 
+C_ENG="Company" C_ITA="Società" C_POR="Socied." C_SPA="Sociedad" C_BRI="Company" C_GER="Unternehmen" 
+C_POL="Firma" C_CHI="公司" C_ARB="الشركة" C_AUS="Company"/>
+</GRP>
+<GRP NAM="BPD1_1" TYB="List" DIM="1">
+<FLD NAM="BPAADD" X3BLORIG="BPD1_1" X3FLORIG="BPAADD" IDX="5" TYP="Char" MOD="Display" LEN="5" 
+C_FRA="Code" C_ENG="Code" C_ITA="Codice" C_POR="Cód." C_SPA="Código" C_BRI="Code" C_GER="Code" 
+C_POL="Kod" C_CHI="代码" C_ARB="رمز " C_AUS="Code"/>
+<FLD NAM="BPADES" X3BLORIG="BPD1_1" X3FLORIG="BPADES" IDX="6" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="ENAFLG" X3BLORIG="BPD1_1" X3FLORIG="ENAFLG" IDX="7" TYP="Integer" MEN="1" MOD="Input" LEN="5" 
+C_FRA="Actif" C_ENG="Active" C_ITA="Attivo" C_POR="Activo" C_SPA="Activo" C_BRI="Active" C_GER="Aktiv" 
+C_POL="Aktywny" C_CHI="激活" C_ARB="نشط     " C_AUS="Active"/>
+<FLD NAM="LAN" X3BLORIG="BPD1_1" X3FLORIG="LAN" IDX="8" TYP="Char" MOD="Input" LEN="3" C_FRA="Langue" 
+C_ENG="Language" C_ITA="Lingua" C_POR="Língua" C_SPA="Idioma" C_BRI="Language" C_GER="Sprache" 
+C_POL="Język" C_CHI="语言" C_ARB="اللغة" C_AUS="Language"/>
+<FLD NAM="ZLAN" X3BLORIG="BPD1_1" X3FLORIG="ZLAN" IDX="9" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="BPDADDFLG" X3BLORIG="BPD1_1" X3FLORIG="BPDADDFLG" IDX="10" TYP="Integer" MEN="1" MOD="Display" 
+LEN="18" C_FRA="Client livré par défaut" C_ENG="Default ship-to customer" 
+C_ITA="Cliente consegnato di default" C_POR="Cliente exped.  p/defeito" 
+C_SPA="Cliente destinatario por defecto" C_BRI="Default shipment customer" 
+C_GER="Standardleistungsempfänger" C_POL="Domyśl. adres wysyłki" C_CHI="默认收货客户" 
+C_ARB="الزبون المسلم إفتراضي" C_AUS="Default ship-to customer"/>
+<FLD NAM="BPDNAM" X3BLORIG="BPD1_1" X3FLORIG="BPDNAM" IDX="11" TYP="Char" MOD="Input" LEN="35" DIM="2" 
+C_FRA="Raison sociale" C_ENG="Company name" C_ITA="Ragione sociale" C_POR="Razão Social" 
+C_SPA="Razón social" C_BRI="Company Name" C_GER="Unternehmensname" C_POL="Nazwa firmy" C_CHI="公司名称" 
+C_ARB="إسم الشركة" C_AUS="Company name"/>
+</GRP>
+<GRP NAM="BPD1_2" TYB="List" DIM="1">
+<FLD NAM="VACBPR" X3BLORIG="BPD1_2" X3FLORIG="VACBPR" IDX="12" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Régime de taxe" C_ENG="Tax rule" C_ITA="Regime IVA" C_POR="Regime impostos" C_SPA="Rég. impuesto" 
+C_BRI="Tax Rule" C_GER="Steuerart" C_POL="Reguła VAT" C_CHI="税则" C_ARB="القاعدة الضريبية" 
+C_AUS="Tax rule"/>
+<FLD NAM="ZVACBPR" X3BLORIG="BPD1_2" X3FLORIG="ZVACBPR" IDX="13" TYP="Char" MOD="Display" LEN="10"/>
+<FLD NAM="SSTENTCOD" X3BLORIG="BPD1_2" X3FLORIG="SSTENTCOD" IDX="14" TYP="Char" MOD="Input" LEN="20" 
+C_FRA="Code exonération NA" C_ENG="Entity/Use" C_ITA="Entità/Utilizzo" C_POR="Entidade/utilização" 
+C_SPA="Entidad/Utilización" C_BRI="Entity/Use code" C_GER="Entität/Verwendung" C_POL="Jednostka/użycie" 
+C_CHI="实体/用途" C_ARB="قانون الإعفاء أميركا الشمالية" C_AUS="Entity/Use"/>
+<FLD NAM="ZSSTENTCOD" X3BLORIG="BPD1_2" X3FLORIG="ZSSTENTCOD" IDX="15" TYP="Char" MOD="Display" LEN="10"/>
+<FLD NAM="REP" X3BLORIG="BPD1_2" X3FLORIG="REP" IDX="16" TYP="Char" MOD="Input" LEN="15" DIM="2"/>
+<FLD NAM="ZREP" X3BLORIG="BPD1_2" X3FLORIG="ZREP" IDX="17" TYP="Char" MOD="Display" LEN="30" DIM="2"/>
+</GRP>
+<GRP NAM="BPD1_3" TYB="List" DIM="1">
+<FLD NAM="PRPTEX" X3BLORIG="BPD1_3" X3FLORIG="PRPTEX" IDX="18" TYP="Char" MOD="Hidden" LEN="17" 
+C_FRA="Préparation" C_ENG="Preparation" C_ITA="Preparazione" C_POR="Preparação" C_SPA="Preparación" 
+C_BRI="Preparation" C_GER="Kommissionierung" C_POL="Przygotowanie" C_CHI="准备" C_ARB="تحضير" 
+C_AUS="Preparation"/>
+<FLD NAM="TWPRPTEX" X3BLORIG="BPD1_3" X3FLORIG="TWPRPTEX" IDX="19" TYP="Integer" MEN="1" MOD="Display" 
+LEN="10" C_FRA="Préparation" C_ENG="Preparation" C_ITA="Preparazione" C_POR="Preparação" 
+C_SPA="Preparación" C_BRI="Preparation" C_GER="Kommissionierung" C_POL="Przygotowanie" C_CHI="准备" 
+C_ARB="تحضير" C_AUS="Preparation"/>
+<FLD NAM="DLVTEX" X3BLORIG="BPD1_3" X3FLORIG="DLVTEX" IDX="20" TYP="Char" MOD="Hidden" LEN="17" 
+C_FRA="Livraison" C_ENG="Delivery" C_ITA="Consegna" C_POR="Entrega" C_SPA="Entrega" C_BRI="Delivery" 
+C_GER="Lieferung" C_POL="Dostawa" C_CHI="发货" C_ARB="التسليم" C_AUS="Delivery"/>
+<FLD NAM="TWDLVTEX" X3BLORIG="BPD1_3" X3FLORIG="TWDLVTEX" IDX="21" TYP="Integer" MEN="1" MOD="Display" 
+LEN="10" C_FRA="Livraison" C_ENG="Delivery" C_ITA="Consegna" C_POR="Entrega" C_SPA="Entrega" 
+C_BRI="Delivery" C_GER="Lieferung" C_POL="Dostawa" C_CHI="发货" C_ARB="التسليم" C_AUS="Delivery"/>
+</GRP>
+<GRP NAM="BPD1_4" TYB="List" DIM="1">
+<FLD NAM="STOFCY" X3BLORIG="BPD1_4" X3FLORIG="STOFCY" IDX="22" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Site expédition" C_ENG="Shipment site  " C_ITA="Sito spedizione" 
+C_POR="Estabelecimento expedição" C_SPA="Planta expedición" C_BRI="Shipping Site" 
+C_GER="Versandstandort" C_POL="Lok. wysyłki" C_CHI="装运地点" C_ARB="موقع الشحن" C_AUS="Shipment site  "/>
+<FLD NAM="ZSTOFCY" X3BLORIG="BPD1_4" X3FLORIG="ZSTOFCY" IDX="23" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="RCPFCY" X3BLORIG="BPD1_4" X3FLORIG="RCPFCY" IDX="24" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Site réception" C_ENG="Receiving site" C_ITA="Sito ricevimento" C_POR="Estabelecimento receção" 
+C_SPA="Planta recepción" C_BRI="Receiving Site" C_GER="Standort Wareneingang" C_POL="Lok. odbioru" 
+C_CHI="收货地点" C_ARB="موقع الإستلام" C_AUS="Receiving site"/>
+<FLD NAM="ZRCPFCY" X3BLORIG="BPD1_4" X3FLORIG="ZRCPFCY" IDX="25" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="FCY" X3BLORIG="BPD1_4" X3FLORIG="FCY" IDX="26" TYP="Char" MOD="Hidden" LEN="5" C_FRA="Site" 
+C_ENG="Site" C_ITA="Sito" C_POR="Estab." C_SPA="Planta" C_BRI="Site" C_GER="Standort" 
+C_POL="Lokalizacja" C_CHI="地点" C_ARB="الموقع" C_AUS="Site"/>
+<FLD NAM="BPCLOC" X3BLORIG="BPD1_4" X3FLORIG="BPCLOC" IDX="27" TYP="Char" MOD="Input" LEN="10" 
+C_FRA="Emplacement prêt" C_ENG="Loan location" C_ITA="Ubicazione prestito" C_POR="Localização pronta" 
+C_SPA="Ubicación préstamo" C_BRI="Loan location" C_GER="Leihlagerplatz" C_POL="Lok. mag u kli." 
+C_CHI="寄售库位" C_ARB="موقع القرض" C_AUS="Loan location"/>
+<FLD NAM="SCOLOC" X3BLORIG="BPD1_4" X3FLORIG="SCOLOC" IDX="28" TYP="Char" MOD="Input" LEN="10" 
+C_FRA="Emp sous-traitant" C_ENG="Subcontract loc." C_ITA="Ubi c/lavoro" C_POR="Loc. subcontrat." 
+C_SPA="Ubi. Subcontratación" C_BRI="Sub-con Loc" C_GER="FB-Lagerplatz" C_POL="M.skład. kooper." 
+C_CHI="外协库位" C_ARB="موقع الباطن" C_AUS="Subcontract loc."/>
+<FLD NAM="DRN" X3BLORIG="BPD1_4" X3FLORIG="DRN" IDX="29" TYP="Integer" MEN="409" MOD="Input" LEN="15" 
+C_FRA="No tournée" C_ENG="Route no." C_ITA="N° tragitto" C_POR="Nr. rota" C_SPA="N.º ruta" 
+C_BRI="Route Number" C_GER="Tournr." C_POL="Numer trasy" C_CHI="路径号" C_ARB="رقم الجولة" 
+C_AUS="Route no."/>
+<FLD NAM="DLVPIO" X3BLORIG="BPD1_4" X3FLORIG="DLVPIO" IDX="30" TYP="Integer" MEN="410" MOD="Input" 
+LEN="15" C_FRA="Priorité livraison" C_ENG="Delivery priority  " C_ITA="Priorità spediz." 
+C_POR="Priorid. entrega" C_SPA="Prioridad entrega" C_BRI="Shipping Priority" C_GER="Lieferpriorität" 
+C_POL="Priorytet wysyłki" C_CHI="发货优先级" C_ARB="أولوية التسليم" C_AUS="Delivery priority  "/>
+<FLD NAM="MDL" X3BLORIG="BPD1_4" X3FLORIG="MDL" IDX="31" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Mode livraison" C_ENG="Delivery mode" C_ITA="Modo consegna" C_POR="Modo expedição" 
+C_SPA="Modo de entrega" C_BRI="Shipping Mode" C_GER="Lieferart" C_POL="Sposób wysyłki" C_CHI="发货模式" 
+C_ARB="طريقة التسليم" C_AUS="Delivery mode"/>
+<FLD NAM="ZMDL" X3BLORIG="BPD1_4" X3FLORIG="ZMDL" IDX="32" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="DAYLTI" X3BLORIG="BPD1_4" X3FLORIG="DAYLTI" IDX="33" TYP="Integer" MOD="Input" LEN="3" 
+C_FRA="Délai livraison" C_ENG="Delivery lead time  " C_ITA="LT consegna" C_POR="Prazo entrega" 
+C_SPA="Plazo entrega" C_BRI="Delivery LT" C_GER="Lieferzeit" C_POL="Czas real. wysyłki" C_CHI="发货提前期" 
+C_ARB="مهلة التسليم" C_AUS="Delivery lead time  "/>
+<FLD NAM="BPTNUM" X3BLORIG="BPD1_4" X3FLORIG="BPTNUM" IDX="34" TYP="Char" MOD="Input" LEN="15" 
+C_FRA="Transporteur" C_ENG="Carrier" C_ITA="Trasportatore" C_POR="Transportador" C_SPA="Transportista" 
+C_BRI="Carrier" C_GER="Frachtführer" C_POL="Przewoźnik" C_CHI="承运人" C_ARB="الناقل - الاسم بالكامل" 
+C_AUS="Carrier"/>
+<FLD NAM="ZBPTNUM" X3BLORIG="BPD1_4" X3FLORIG="ZBPTNUM" IDX="35" TYP="Char" MOD="Display" LEN="10"/>
+</GRP>
+<GRP NAM="BPD1_5" TYB="List" DIM="1">
+<FLD NAM="NPRFLG" X3BLORIG="BPD1_5" X3FLORIG="NPRFLG" IDX="36" TYP="Integer" MEN="1" MOD="Input" 
+LEN="10" C_FRA="Bon prépa" C_ENG="Pick ticket" C_ITA="Bolla prep." C_POR="Boletim de preparação" 
+C_SPA="Doc. preparación" C_BRI="Picking Ticket" C_GER="Kommissionierschein" C_POL="Dokument kompletacji" 
+C_CHI="提货单" C_ARB="إيصال الحضير  عنوان قصير" C_AUS="Pick ticket"/>
+<FLD NAM="NDEFLG" X3BLORIG="BPD1_5" X3FLORIG="NDEFLG" IDX="37" TYP="Integer" MEN="1" MOD="Input" 
+LEN="10" C_FRA="Bon liv" C_ENG="Pckg. slip" C_ITA="Bolla cons" C_POR="Guia de expedição" 
+C_SPA="Doc. entrega" C_BRI="Packing Slip" C_GER="Lieferschein" C_POL="WZ" C_CHI="发货单" 
+C_ARB="مذكرة التسليم  عنوان قصير" C_AUS="Pckg. slip"/>
+</GRP>
+<GRP NAM="BPD1_6" TYB="List" DIM="1">
+<FLD NAM="EECICT" X3BLORIG="BPD1_6" X3FLORIG="EECICT" IDX="38" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Incoterm" C_ENG="Incoterm" C_ITA="Incoterm" C_POR="Incoterm" C_SPA="Incoterms" 
+C_BRI="Freight Terms" C_GER="Incoterm" C_POL="Incoterms" C_CHI="国际贸易术语" C_ARB="Incoterm" 
+C_AUS="Incoterm"/>
+<FLD NAM="ZEECICT" X3BLORIG="BPD1_6" X3FLORIG="ZEECICT" IDX="39" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="ICTCTY" X3BLORIG="BPD1_6" X3FLORIG="ICTCTY" IDX="40" TYP="Char" MOD="Input" LEN="40" 
+C_FRA="Ville Incoterm" C_ENG="Incoterm town" C_ITA="Città Incoterm" C_POR="Local Incoterm" 
+C_SPA="Ciudad Incoterms" C_BRI="Freight term town" C_GER="Ort Incoterm" C_POL="Miasto Incoterms" 
+C_CHI="国际贸易术语城镇" C_ARB="Incotermمدينة" C_AUS="Incoterm town"/>
+<FLD NAM="FFWNUM" X3BLORIG="BPD1_6" X3FLORIG="FFWNUM" IDX="41" TYP="Char" MOD="Input" LEN="15" 
+C_FRA="Transitaire" C_ENG="Freight agent" C_ITA="Altro Trasp." C_POR="Despachante" C_SPA="Transitario" 
+C_BRI="Freight Agent" C_GER="Transit" C_POL="Agent przewozu towarów" C_CHI="运输代理商" C_ARB="وكيل الشحن" 
+C_AUS="Freight agent"/>
+<FLD NAM="ZFFWNUM" X3BLORIG="BPD1_6" X3FLORIG="ZFFWNUM" IDX="42" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="FFWADD" X3BLORIG="BPD1_6" X3FLORIG="FFWADD" IDX="43" TYP="Char" MOD="Input" LEN="5"/>
+</GRP>
+<GRP NAM="BPD1_7" TYB="List" DIM="1">
+<FLD NAM="UVYDAY1" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY1" IDX="44" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Lundi" C_ENG="Monday" C_ITA="Lunedì" C_POR="Segunda-feira" C_SPA="Lunes" C_BRI="Monday" 
+C_GER="Montag" C_POL="Poniedz." C_CHI="星期一" C_ARB="الإثنين" C_AUS="Monday"/>
+<FLD NAM="UVYDAY2" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY2" IDX="45" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Mardi" C_ENG="Tuesday" C_ITA="Martedì" C_POR="Terça-feira" C_SPA="Martes" 
+C_BRI="Tuesday" C_GER="Dienstag" C_POL="Wtorek" C_CHI="星期二" C_ARB="الثلاثاء" C_AUS="Tuesday"/>
+<FLD NAM="UVYDAY3" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY3" IDX="46" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Mercredi" C_ENG="Wednesday" C_ITA="Mercoledì" C_POR="Quarta-feira" C_SPA="Miércoles" 
+C_BRI="Wednesday" C_GER="Mittwoch" C_POL="Środa" C_CHI="星期三" C_ARB="الأربعاء" C_AUS="Wednesday"/>
+<FLD NAM="UVYDAY4" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY4" IDX="47" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Jeudi" C_ENG="Thursday" C_ITA="Giovedì" C_POR="Quinta-feira" C_SPA="Jueves" 
+C_BRI="Thursday" C_GER="Donnerstag" C_POL="Czwartek" C_CHI="星期四" C_ARB="الخميس" C_AUS="Thursday"/>
+<FLD NAM="UVYDAY5" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY5" IDX="48" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Vendredi" C_ENG="Friday" C_ITA="Venerdì" C_POR="Sexta-feira" C_SPA="Viernes" 
+C_BRI="Friday" C_GER="Freitag" C_POL="Piątek" C_CHI="星期五" C_ARB="الجمعة" C_AUS="Friday"/>
+<FLD NAM="UVYDAY6" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY6" IDX="49" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Samedi" C_ENG="Saturday" C_ITA="Sabato" C_POR="Sábado" C_SPA="Sábado" C_BRI="Saturday" 
+C_GER="Samstag" C_POL="Sobota" C_CHI="星期六" C_ARB="السبت" C_AUS="Saturday"/>
+<FLD NAM="UVYDAY7" X3BLORIG="BPD1_7" X3FLORIG="UVYDAY7" IDX="50" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Dimanche" C_ENG="Sunday" C_ITA="Domenica" C_POR="Domingo" C_SPA="Domingo" C_BRI="Sunday" 
+C_GER="Sonntag" C_POL="Niedziela" C_CHI="星期日" C_ARB="الأحد" C_AUS="Sunday"/>
+<FLD NAM="UVYCOD" X3BLORIG="BPD1_7" X3FLORIG="UVYCOD" IDX="51" TYP="Char" MOD="Input" LEN="5" 
+C_FRA="Indisponibilité" C_ENG="Unavailable" C_ITA="Indisponibilità" C_POR="Indisponibilidade" 
+C_SPA="No disponible" C_BRI="Unavailable" C_GER="Kalenderfehltage" C_POL="Niedostępny" C_CHI="假期" 
+C_ARB="غير متوفر   عنوان طويل" C_AUS="Unavailable"/>
+<FLD NAM="ZUVYCOD" X3BLORIG="BPD1_7" X3FLORIG="ZUVYCOD" IDX="52" TYP="Char" MOD="Display" LEN="30"/>
+</GRP>
+<GRP NAM="BPD1_8" TYB="List" DIM="1">
+<FLD NAM="EECNUM" X3BLORIG="BPD1_8" X3FLORIG="EECNUM" IDX="53" TYP="Char" MOD="Input" LEN="20" 
+C_FRA="Identification UE" C_ENG="EU identification" C_ITA="Identificazione CEE" 
+C_POR="Identificação CEE" C_SPA="ID Intrastat" C_BRI="EEC Identification" C_GER="EU-Ust.-IdNr." 
+C_POL="Identyfikator UE" C_CHI="EEC 标识" C_ARB="الرقم التعريفي في الاتحاد الاوروبي" 
+C_AUS="EU identification"/>
+<FLD NAM="EECINCRAT" X3BLORIG="BPD1_8" X3FLORIG="EECINCRAT" IDX="54" TYP="Decimal" MOD="Input" LEN="3.2" 
+C_FRA="Majoration DEB" C_ENG="Intrastat increase" C_ITA="Maggioraz. CEE" C_POR="Majoração CEE" 
+C_SPA="Incremento Intrastat" C_BRI="Intrastat increase" C_GER="Intrastat-Erhöhung" 
+C_POL="Wzrost Intrastat" C_CHI="EEC价格上涨" C_ARB="زيادة" C_AUS="Intrastat increase"/>
+<FLD NAM="EECLOC" X3BLORIG="BPD1_8" X3FLORIG="EECLOC" IDX="55" TYP="Integer" MEN="236" MOD="Input" 
+LEN="15" C_FRA="Lieu transport DEB" C_ENG="Intrastat transport location" C_ITA="Luogo trasp. CEE" 
+C_POR="Local transporte CEE" C_SPA="Lugar transporte Intrastat" C_BRI="Intrastat transport location" 
+C_GER="Intrastat-Transportort" C_POL="Miejsce transportu Intrastat" C_CHI="EEC 运输地址" 
+C_ARB="CEEرابط النقل" C_AUS="Intrastat transport location"/>
+</GRP>
+<GRP NAM="BPD2_1" TYB="List" DIM="1">
+<FLD NAM="BPADES" X3BLORIG="BPD2_1" X3FLORIG="BPADES" IDX="56" TYP="Char" MOD="Input" LEN="20" 
+C_FRA="Intitulé" C_ENG="Description" C_ITA="Descrizione" C_POR="Descr." C_SPA="Descripción" 
+C_BRI="Description" C_GER="Bezeichnung" C_POL="Opis" C_CHI="标题" C_ARB="العنوان" C_AUS="Description"/>
+<FLD NAM="CRY" X3BLORIG="BPD2_1" X3FLORIG="CRY" IDX="57" TYP="Char" MOD="Input" LEN="3" C_FRA="Pays" 
+C_ENG="Country" C_ITA="Paese" C_POR="País" C_SPA="País" C_BRI="Country" C_GER="Land" C_POL="Kraj" 
+C_CHI="国家" C_ARB="البلد" C_AUS="Country"/>
+<FLD NAM="ZCRY" X3BLORIG="BPD2_1" X3FLORIG="ZCRY" IDX="58" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="CRYNAM" X3BLORIG="BPD2_1" X3FLORIG="CRYNAM" IDX="59" TYP="Char" MOD="Input" LEN="40"/>
+<FLD NAM="ADDLIG1" X3BLORIG="BPD2_1" X3FLORIG="ADDLIG1" IDX="60" TYP="Char" MOD="Input" LEN="50"/>
+<FLD NAM="ADDLIG2" X3BLORIG="BPD2_1" X3FLORIG="ADDLIG2" IDX="61" TYP="Char" MOD="Input" LEN="50"/>
+<FLD NAM="ADDLIG3" X3BLORIG="BPD2_1" X3FLORIG="ADDLIG3" IDX="62" TYP="Char" MOD="Input" LEN="50"/>
+<FLD NAM="POSCOD" X3BLORIG="BPD2_1" X3FLORIG="POSCOD" IDX="63" TYP="Char" MOD="Input" LEN="10" 
+C_FRA="CP" C_ENG="Postal code" C_ITA="CP" C_POR="CP" C_SPA="CP" C_BRI="Postcode" C_GER="PLZ" C_POL="PC" 
+C_CHI="邮政编码" C_ARB="الرمز البريدي" C_AUS="Postal code"/>
+<FLD NAM="CTY" X3BLORIG="BPD2_1" X3FLORIG="CTY" IDX="64" TYP="Char" MOD="Input" LEN="40" C_FRA="Ville" 
+C_ENG="City" C_ITA="Città" C_POR="Cidade" C_SPA="Ciudad" C_BRI="City" C_GER="Stadt" C_POL="Miasto" 
+C_CHI="城市" C_ARB="المدينة" C_AUS="City"/>
+<FLD NAM="ITINERAIRE" X3BLORIG="BPD2_1" X3FLORIG="ITINERAIRE" IDX="65" TYP="Char" MOD="Input" LEN="3"/>
+<FLD NAM="SAT" X3BLORIG="BPD2_1" X3FLORIG="SAT" IDX="66" TYP="Char" MOD="Input" LEN="35"/>
+<FLD NAM="FCYWEB" X3BLORIG="BPD2_1" X3FLORIG="FCYWEB" IDX="67" TYP="Char" MOD="Input" LEN="250" 
+C_FRA="Site Web" C_ENG="Website" C_ITA="Sito Web" C_POR="Site Web" C_SPA="Sitio Web" C_BRI="Website" 
+C_GER="Website" C_POL="Strona internetowa" C_CHI="网址" C_ARB="موقع الإنترنت" C_AUS="Website"/>
+<FLD NAM="EXTNUM" X3BLORIG="BPD2_1" X3FLORIG="EXTNUM" IDX="68" TYP="Char" MOD="Input" LEN="30" 
+C_FRA="Identifiant externe" C_ENG="External identifier" C_ITA="Identificativo esterno" 
+C_POR="Indentif. externo" C_SPA="Identificador externo" C_BRI="External identifier" 
+C_GER="Externe Referenz" C_POL="Identyfikator zewn." C_CHI="外部识别码" C_ARB="المعرّف الخارجي" 
+C_AUS="External identifier"/>
+<FLD NAM="BPAADDFLG" X3BLORIG="BPD2_1" X3FLORIG="BPAADDFLG" IDX="69" TYP="Integer" MEN="1" MOD="Display" 
+LEN="18" C_FRA="Adresse par défaut" C_ENG="Default address" C_ITA="Indirizzo di default" 
+C_POR="Endereço p/defeito" C_SPA="Direc. por defecto" C_BRI="Default Address" C_GER="Standardadresse" 
+C_POL="Adres domyślny" C_CHI="默认地址" C_ARB="العنوان الافتراضي" C_AUS="Default address"/>
+<FLD NAM="VALADR" X3BLORIG="BPD2_1" X3FLORIG="VALADR" IDX="70" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Validation adresse" C_ENG="Address validation" C_ITA="Validazione indirizzo" 
+C_POR="Validação endereço" C_SPA="Validación dirección" C_BRI="Address validation" 
+C_GER="Freigabe Adresse" C_POL="Walidacja adresu" C_CHI="地址审核" C_ARB="التحقق من العنوان" 
+C_AUS="Address validation"/>
+<FLD NAM="ADRVAL" X3BLORIG="BPD2_1" X3FLORIG="ADRVAL" IDX="71" TYP="Integer" MEN="1" MOD="Display" 
+LEN="10" C_FRA="Validé" C_ENG="Validated" C_ITA="Validato" C_POR="Validado" C_SPA="Validado" 
+C_BRI="Validated" C_GER="Freigegeben" C_POL="Zweryfikowano" C_CHI="已审核" C_ARB="تحقق" C_AUS="Validated"/>
+</GRP>
+<GRP NAM="BPD2_2" TYB="List" DIM="1">
+<FLD NAM="TEL" X3BLORIG="BPD2_2" X3FLORIG="TEL" IDX="72" TYP="Char" MOD="Input" LEN="20" DIM="5"/>
+</GRP>
+<GRP NAM="BPD2_3" TYB="List" DIM="1">
+<FLD NAM="WEB" X3BLORIG="BPD2_3" X3FLORIG="WEB" IDX="73" TYP="Char" MOD="Input" LEN="80" DIM="5"/>
+</GRP>
+<GRP NAM="ADXTEC" TYB="List" DIM="1">
+<FLD NAM="WW_MODSTAMP" TYP="Char" MOD="Input" LEN="20" IDX="74"/>
+<FLD NAM="WW_MODUSER" TYP="Char" MOD="Display" LEN="20" IDX="75"/>
+</GRP>
+ </ADXDATA>
+ <ADXKEY>
+<GRP NAM="LEFTLIST" DIM="10000">
+<FLD NAM="BPCNUM" MOD="Display" TYP="Char" LEN="15" C_FRA="Client" C_ENG="Customer" C_ITA="Cliente" 
+C_POR="Cliente" C_SPA="Cliente" C_BRI="Customer" C_GER="Kunde" C_POL="Klient" C_CHI="客户" 
+C_ARB="زبون  رقم شريك العمل" C_AUS="Customer"/>
+<FLD NAM="BPAADD" MOD="Display" TYP="Char" LEN="5" C_FRA="Adresse livraison" C_ENG="Delivery address" 
+C_ITA="Indirizzo consegna" C_POR="End. expedição" C_SPA="Dirección entrega" C_BRI="Ship-to Address" 
+C_GER="Lieferadresse" C_POL="Adres wysyłki" C_CHI="收货地址" C_ARB="عنوان التسليم" C_AUS="Delivery address"/>
+<FLD NAM="BPDNAM" MOD="Display" TYP="Char" LEN="35" C_FRA="Raison sociale" C_ENG="Company name" 
+C_ITA="Ragione sociale" C_POR="Razão Social" C_SPA="Razón social" C_BRI="Company Name" 
+C_GER="Unternehmensname" C_POL="Nazwa firmy" C_CHI="公司名称" C_ARB="إسم الشركة" C_AUS="Company name"/>
+</GRP>
+ </ADXKEY>
+ <ADXMEN>
+<MNU NO="1">
+<VAL IND="1" C_FRA="Non" C_ENG="No" C_ITA="No" C_POR="Não" C_SPA="No" C_BRI="No" C_GER="Nein" 
+C_POL="Nie" C_CHI="否" C_ARB="كلا" C_AUS="No"/>
+<VAL IND="2" C_FRA="Oui" C_ENG="Yes" C_ITA="Si" C_POR="Sim" C_SPA="Sí" C_BRI="Yes" C_GER="Ja" 
+C_POL="Tak" C_CHI="是" C_ARB="نعم" C_AUS="Yes"/>
+</MNU>
+<MNU NO="236">
+<VAL IND="1" C_FRA="Etat concerné" C_ENG="Domestic" C_ITA="Stesso stato" C_POR="País respectivo" 
+C_SPA="Estado correspondiente" C_BRI="Domestic" C_GER="Inland" C_POL="Krajowy" C_CHI="国内的" 
+C_ARB="الدولة المعنية" C_AUS="Domestic"/>
+<VAL IND="2" C_FRA="Autre état UE" C_ENG="Other EU" C_ITA="Altro paese CEE" C_POR="Outro País UE" 
+C_SPA="Otro Estado UE" C_BRI="Other EEC" C_GER="Sonstige EU" C_POL="Wewnątrz UE" C_CHI="其他欧盟国家" 
+C_ARB="CEE دولة أخرى" C_AUS="Other EU"/>
+<VAL IND="3" C_FRA="Hors UE" C_ENG="Outside EU" C_ITA="Fuori CEE" C_POR="Fora UE" C_SPA="Fuera UE" 
+C_BRI="Outside EEC" C_GER="Drittland" C_POL="Poza UE" C_CHI="欧盟以外的国家" C_ARB="CEE خارج" 
+C_AUS="Outside EU"/>
+</MNU>
+<MNU NO="409">
+<VAL IND="1" C_FRA="Tournée 1" C_ENG="Route code 1" C_ITA="Tragitto 1" C_POR="Ciclo 1" C_SPA="Ruta 1" 
+C_BRI="Route code 1" C_GER="Tour 1" C_POL="Kod 1 trasy" C_CHI="路径1" C_ARB="العودة 1" 
+C_AUS="Route code 1"/>
+<VAL IND="2" C_FRA="Tournée 2" C_ENG="Route code 2" C_ITA="Tragitto 2" C_POR="Ciclo 2" C_SPA="Ruta 2" 
+C_BRI="Route code 2" C_GER="Tour 2" C_POL="Kod 2 trasy" C_CHI="路径2" C_ARB="العودة 2" 
+C_AUS="Route code 2"/>
+<VAL IND="3" C_FRA="Tournée 3" C_ENG="Route code 3" C_ITA="Tragitto 3" C_POR="Ciclo 3" C_SPA="Ruta 3" 
+C_BRI="Route code 3" C_GER="Tour 3" C_POL="Kod 3 trasy" C_CHI="路径3" C_ARB="العودة 3" 
+C_AUS="Route code 3"/>
+<VAL IND="4" C_FRA="Tournée 4" C_ENG="Route code 4" C_POR="Ciclo 4" C_SPA="Ruta 4" C_BRI="Route code 4" 
+C_GER="Tour 4" C_POL="Kod 4 trasy" C_AUS="Route code 4"/>
+</MNU>
+<MNU NO="410">
+<VAL IND="1" C_FRA="Normal" C_ENG="Normal" C_ITA="Normale" C_POR="Normal" C_SPA="Normal" C_BRI="Normal" 
+C_GER="Normal" C_POL="Normalne" C_CHI="普通" C_ARB="عادي" C_AUS="Normal"/>
+<VAL IND="2" C_FRA="Urgent" C_ENG="Urgent" C_ITA="Urgente" C_POR="Urgente" C_SPA="Urgente" 
+C_BRI="Urgent" C_GER="Dringend" C_POL="Pilne" C_CHI="紧急" C_ARB="طارئ" C_AUS="Urgent"/>
+<VAL IND="3" C_FRA="Très urgent" C_ENG="Critical" C_ITA="Molto urgente" C_POR="Muito urgente" 
+C_SPA="Muy urgente" C_BRI="Very Urgent" C_GER="Sehr dringend" C_POL="Bardzo pilne" C_CHI="非常紧急" 
+C_ARB="طارئ جدا" C_AUS="Critical"/>
+</MNU>
+ </ADXMEN>
+ <ADXSER>
+<MET ID="READ" C_FRA="Lire" C_ENG="Read" C_ITA="Leggi" C_POR="Ler" C_SPA="Leer" C_BRI="Read" 
+C_GER="Lesen" C_POL="Odczyt" C_CHI="读取" C_ARB="قراءة" C_AUS="Read"/>
+<MET ID="CREATE" C_FRA="Créer" C_ENG="Create" C_ITA="Crea" C_POR="Criar" C_SPA="Crear" C_BRI="Create" 
+C_GER="Anlegen" C_POL="Utwórz" C_CHI="创建" C_ARB="خلق" C_AUS="Create"/>
+<MET ID="MODIFY" C_FRA="Modifier" C_ENG="Modify" C_ITA="Modifica" C_POR="Modificar" C_SPA="Modificar" 
+C_BRI="Modify" C_GER="Ändern" C_POL="Modyfikuj" C_CHI="修改" C_ARB="تعديل" C_AUS="Modify"/>
+<MET ID="DELETE" C_FRA="Supprimer" C_ENG="Delete" C_ITA="Elimina" C_POR="Suprimir" C_SPA="Borrar" 
+C_BRI="Delete" C_GER="Löschen" C_POL="Usuń" C_CHI="删除" C_ARB="إلغاء" C_AUS="Delete"/>
+<MET ID="LIST" C_FRA="Liste" C_ENG="List" C_ITA="Lista" C_POR="Lista" C_SPA="Lista" C_BRI="List" 
+C_GER="Liste" C_POL="Lista" C_CHI="列表" C_ARB="لائحة" C_AUS="List"/>
+ </ADXSER>
+<ADXREAD TAB="BPDLVCUST"><GRP DIM="1" NAM="KEYS">
+<FLD NAM="BPCNUM" TYP="Char" MOD="Input" LEN="15" C_FRA="Client" C_ENG="Customer" C_ITA="Cliente" 
+C_POR="Cliente" C_SPA="Cliente" C_BRI="Customer" C_GER="Kunde" C_POL="Klient" C_CHI="客户" 
+C_ARB="زبون  رقم شريك العمل" C_AUS="Customer"/>
+<FLD NAM="BPAADD" TYP="Char" MOD="Input" LEN="5" C_FRA="Adresse livraison" C_ENG="Delivery address" 
+C_ITA="Indirizzo consegna" C_POR="End. expedição" C_SPA="Dirección entrega" C_BRI="Ship-to Address" 
+C_GER="Lieferadresse" C_POL="Adres wysyłki" C_CHI="收货地址" C_ARB="عنوان التسليم" C_AUS="Delivery address"/>
+ </GRP></ADXREAD>
+</ADXDOC>
