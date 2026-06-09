@@ -1,0 +1,128 @@
+----------------------------------------------------------------------------------------
+------------------- Customer Category Web Services test --------------------------------
+----------------------------------------------------------------------------------------
+
+Console.WriteLine("Running X3 smoke test: S300BCG...");
+
+var categoryResult = await categoryService.SaveAsync(
+    new X3CustomerCategoryDto
+    {
+        CategoryCode = "TST2",
+        Description = "Test Category 2"
+    });
+
+Console.WriteLine("Success : " + categoryResult.Success);
+Console.WriteLine("Status  : " + categoryResult.Status);
+Console.WriteLine("Error   : " + categoryResult.ErrorMessage);
+
+Console.WriteLine();
+Console.WriteLine("Result XML:");
+Console.WriteLine(categoryResult.ResultXml);
+
+Console.WriteLine();
+Console.WriteLine("Raw Response:");
+Console.WriteLine(categoryResult.RawResponse);
+
+------------------------------------------------------------------------------------
+------------------------Customers---------------------------------------------------
+------------------------------------------------------------------------------------
+
+Console.WriteLine("Running X3 smoke test: S300BPC...");
+
+var customer = new X3CustomerDto
+{
+    CustomerNumber = "TSTCUST08",
+    CategoryCode = "TST",
+    IsActive = 2,
+
+    ShortDescription = "TEST08",
+    Acronym = "TEST08",
+    NameLine1 = "Test Customer 08",
+
+    Country = "CA",
+    AddressCountry = "CA",
+    Language = "ENG",
+    Currency = "CAD",
+    TaxIdNumber = "999999999",
+
+    AddressCode = "001",
+    AddressDescription = "Main Address",
+    AddressLine1 = "123 Test Street",
+    City = "Toronto",
+    StateProvince = "ON",
+    PostalCode = "M1M1M1",
+
+    TaxRule = "ON",
+    PaymentTerm = "NET30",
+    AccountingCode = "STD",
+
+    OptionalFields = new Dictionary<string, string?>
+    {
+        ["S300GROUP"] = "RETAIL",
+        ["S300REGION"] = "ONTARIO",
+        ["S300TYPE"] = "CORPORATE",
+        ["S300SOURCE"] = "SAGE300",
+        ["S300STATUS"] = "ACTIVE"
+    }
+};
+
+Console.WriteLine(customer.ToX3Xml());
+
+var customerResult =
+    await customerService.SaveAsync(customer);
+
+Console.WriteLine("Success : " + customerResult.Success);
+Console.WriteLine("Status  : " + customerResult.Status);
+Console.WriteLine("Error   : " + customerResult.ErrorMessage);
+
+Console.WriteLine();
+Console.WriteLine("Raw Response:");
+Console.WriteLine(customerResult.RawResponse);
+
+----------------------------------------------------------------------------------------
+------------------- Ship to Customer Web Services test --------------------------------
+----------------------------------------------------------------------------------------
+
+Console.WriteLine("Running X3 smoke test: S300BPD...");
+
+var shipTo = new X3ShipToCustomerDto
+{
+    CustomerNumber = "TSTCUST09",
+    ShipToCode = "002",
+
+    IsActive = 2,
+    Language = "ENG",
+
+    NameLine1 = "Toronto Warehouse",
+
+    TaxRule = "ON",
+
+    AddressDescription = "Warehouse Address",
+    Country = "CA",
+
+    AddressLine1 = "456 Warehouse Road",
+
+    City = "Toronto",
+    StateProvince = "ON",
+    PostalCode = "M2M2M2",
+
+    Phone1 = "4165551234",
+    Email1 = "warehouse@test.com"
+};
+
+Console.WriteLine(shipTo.ToX3Xml());
+
+var shipToResult =
+    await shipToCustomerService.SaveAsync(shipTo);
+
+Console.WriteLine("Success : " + shipToResult.Success);
+Console.WriteLine("Status  : " + shipToResult.Status);
+Console.WriteLine("Error   : " + shipToResult.ErrorMessage);
+
+Console.WriteLine();
+Console.WriteLine("Result XML:");
+Console.WriteLine(shipToResult.ResultXml);
+
+Console.WriteLine();
+Console.WriteLine("Raw Response:");
+Console.WriteLine(shipToResult.RawResponse);
