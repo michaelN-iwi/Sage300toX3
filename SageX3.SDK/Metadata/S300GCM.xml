@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ADXDOC PNA="S300GCM" NAM="OGCM" TIM="20260609171756" OBJ="GCM" FOL="SEED" SOL="X3ERPV12" 
+WRP="WJS300GCM" USER="ERPUS" VER="6.30" HEAD="1">
+ <ADXDATA>
+<GRP NAM="GCM1_1" TYB="List" DIM="1">
+<FLD NAM="GCM" X3BLORIG="GCM1_1" X3FLORIG="GCM" IDX="1" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Modèle comptable" C_ENG="Account core model" C_ITA="Modello contabile" 
+C_POR="Mod. contabilístico" C_SPA="Modelo contable" C_BRI="Accounting model" C_GER="Buchhaltungsmodell" 
+C_POL="Model księgowy" C_CHI="会计核心模型" C_ARB="نموذج المحاسبة" C_AUS="Account core model"/>
+<FLD NAM="ZGCM" X3BLORIG="GCM1_1" X3FLORIG="ZGCM" IDX="2" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="DESTRA" X3BLORIG="GCM1_1" X3FLORIG="DESTRA" IDX="3" TYP="Char" MOD="Input" LEN="30" 
+C_FRA="Désignation" C_ENG="Description" C_ITA="Descrizione" C_POR="Designação" C_SPA="Descripción" 
+C_BRI="Description" C_GER="Bezeichnung" C_POL="Opis" C_CHI="描述" C_ARB="الوصف" C_AUS="Description"/>
+</GRP>
+<GRP NAM="GCM1_2" TYB="List" DIM="1">
+<FLD NAM="SHOTRA" X3BLORIG="GCM1_2" X3FLORIG="SHOTRA" IDX="4" TYP="Char" MOD="Input" LEN="12" 
+C_FRA="Intitulé court" C_ENG="Short description" C_ITA="Descr. breve" C_POR="Desc. curta" 
+C_SPA="Descrip. corta" C_BRI="Short title" C_GER="Kurzbezeichnung" C_POL="Krótki tytuł" C_CHI="简称" 
+C_ARB="وصف قصير" C_AUS="Short description"/>
+<FLD NAM="LEG" X3BLORIG="GCM1_2" X3FLORIG="LEG" IDX="5" TYP="Char" MOD="Input" LEN="20" 
+C_FRA="Législation" C_ENG="Legislation" C_ITA="Legislazione" C_POR="Legislação" C_SPA="Legislación" 
+C_BRI="Legislation" C_GER="Rechtsordnung" C_POL="Legislacja" C_CHI="准则" C_ARB="تشريعات" 
+C_AUS="Legislation"/>
+<FLD NAM="ZLEG" X3BLORIG="GCM1_2" X3FLORIG="ZLEG" IDX="6" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="FLGIAS" X3BLORIG="GCM1_2" X3FLORIG="FLGIAS" IDX="7" TYP="Integer" MEN="1" MOD="Input" LEN="20" 
+C_FRA="Amortissements IAS" C_ENG="IAS depreciations" C_ITA="Ammortamenti IAS" C_POR="Amortizações IAS" 
+C_SPA="Amortizaciones IAS" C_BRI="IAS depreciations" C_GER="Abschreibungen IAS" C_POL="MSR" 
+C_CHI="IAS折旧" C_ARB="IASإطفاءات" C_AUS="IAS depreciations"/>
+</GRP>
+<GRP NAM="GCM1_3" TYB="List" DIM="1">
+<FLD NAM="GENLEDTYP" X3BLORIG="GCM1_3" X3FLORIG="GENLEDTYP" IDX="8" TYP="Integer" MEN="2644" MOD="Input" 
+LEN="15" C_FRA="GL général principal" C_ENG="Main general ledger" C_ITA="Rif. generale principale" 
+C_POR="Ref. geral principal" C_SPA="LM general principal" C_BRI="Principal general ref" 
+C_GER="Hauptbuchungskreis Fibu" C_POL="Podstawowa księga główna" C_CHI="主要总账" C_ARB="مرجعية عامة رئيسية" 
+C_AUS="Main general ledger"/>
+<FLD NAM="ANALEDTYP" X3BLORIG="GCM1_3" X3FLORIG="ANALEDTYP" IDX="9" TYP="Integer" MEN="2644" MOD="Input" 
+LEN="15" C_FRA="GL analytique principal" C_ENG="Main analytical ledger" 
+C_ITA="Rif. analitica principale" C_POR="Ref. analítica principal" C_SPA="LM analítico principal" 
+C_BRI="Principal analytic ref" C_GER="Hauptbuchungskreis Kore" C_POL="Podstawowa księga analityczna" 
+C_CHI="主要分析账" C_ARB="مرجعية تحليلية رئيسية" C_AUS="Main analytical ledger"/>
+<FLD NAM="IASLEDTYP" X3BLORIG="GCM1_3" X3FLORIG="IASLEDTYP" IDX="10" TYP="Integer" MEN="2644" 
+MOD="Input" LEN="15" C_FRA="Réf. IAS principal" C_ENG="Main IAS general ledger" 
+C_ITA="Rif. IAS principale" C_POR="Ref. IAS principal" C_SPA="LM general IAS principal" 
+C_BRI="Main IAS general ledger" C_GER="Hauptbuchungskreis IAS" C_POL="Księga główna MSR" C_CHI="主要IAS账册" 
+C_ARB="الرئيسيةIASمرجعية" C_AUS="Main IAS general ledger"/>
+</GRP>
+<GRP NAM="GCM1_4" TYB="Table" DIM="10" IDTAB="GCM1~NBRLED" OPT="">
+<FLD NAM="LEDTYP" X3BLORIG="GCM1_4" X3FLORIG="LEDTYP" IDX="12" TYP="Integer" MEN="2644" MOD="Display" 
+LEN="15" C_FRA="Type de grand-livre" C_ENG="General ledger type" C_POR="Tipo de razão da contabilidade" 
+C_SPA="Tipo libro mayor" C_BRI="General ledger type" C_GER="Hauptbuchungskreistyp" 
+C_POL="Typ księgi głównej" C_CHI="总账类型" C_AUS="General ledger type"/>
+<FLD NAM="CFMAUT" X3BLORIG="GCM1_4" X3FLORIG="CFMAUT" IDX="13" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Grand-livre auto" C_ENG="Auto general ledger" C_POR="Razão autom." 
+C_SPA="Libro mayor auto." C_BRI="Auto general ledger" C_GER="Auto-Hauptbuchungskreis" 
+C_POL="Automatyczna księga główna" C_CHI="自动总账" C_AUS="Auto general ledger"/>
+<FLD NAM="ORILEDTYP" X3BLORIG="GCM1_4" X3FLORIG="ORILEDTYP" IDX="14" TYP="Integer" MEN="2644" 
+MOD="Input" LEN="10" C_FRA="Type grand-livre origine" C_ENG="Source general ledger type" 
+C_ITA="Tipo riferimento origine" C_POR="Tipo referencial origem" C_SPA="Tipo libro mayor origen" 
+C_BRI="Source general ledger type" C_GER="Typ Ursprungsbuchungskreis" 
+C_POL="Typ źródłowej księgi analitycznej" C_CHI="来源账册类型" C_ARB="نوع مرجعية الأصل" 
+C_AUS="Source general ledger type"/>
+<FLD NAM="LED" X3BLORIG="GCM1_4" X3FLORIG="LED" IDX="15" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Référentiel" C_ENG="Ledger" C_ITA="Riferimento" C_POR="Referencial" C_SPA="Referencial" 
+C_BRI="Ledger" C_GER="Buchungskreis" C_POL="Księga" C_CHI="账册" C_ARB="مرجعية" C_AUS="Ledger"/>
+<FLD NAM="CUR" X3BLORIG="GCM1_4" X3FLORIG="CUR" IDX="16" TYP="Char" MOD="Input" LEN="3" C_FRA="Devise" 
+C_ENG="Currency" C_ITA="Valuta" C_POR="Divisa" C_SPA="Divisa" C_BRI="Currency" C_GER="Währung" 
+C_POL="Waluta" C_CHI="币种" C_ARB="العملة" C_AUS="Currency"/>
+<FLD NAM="FLGVCRRAT" X3BLORIG="GCM1_4" X3FLORIG="FLGVCRRAT" IDX="17" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Type cours doc" C_ENG="Doc rate type" C_ITA="Tipo cambio doc" C_POR="Tipo câmbio doc" 
+C_SPA="Tipo cambio doc" C_BRI="Doc exchange rate type" C_GER="Kurstyp Dok" C_POL="Typ kursu z dokumentu" 
+C_CHI="凭证汇率类型" C_ARB="نوع الدورات الوثائقية" C_AUS="Doc rate type"/>
+<FLD NAM="TYPRAT" X3BLORIG="GCM1_4" X3FLORIG="TYPRAT" IDX="18" TYP="Integer" MEN="202" MOD="Input" 
+LEN="15" C_FRA="Type cours" C_ENG="Rate type" C_ITA="Tipo cambio" C_POR="Tipo câmbio" 
+C_SPA="Tipo cambio" C_BRI="Rate type" C_GER="Kurstyp" C_POL="Typ kursu" C_CHI="汇率类型" C_ARB="نوع المعدل" 
+C_AUS="Rate type"/>
+<FLD NAM="DACRAT" X3BLORIG="GCM1_4" X3FLORIG="DACRAT" IDX="19" TYP="Integer" MEN="2645" MOD="Input" 
+LEN="3" C_FRA="Saisie cours" C_ENG="Rate entry" C_ITA="Inserimento cambio" C_POR="Reg. câmbio" 
+C_SPA="Entrada cambio" C_BRI="Exchange rate entry" C_GER="Erfassung Kurs" C_POL="Wprowadzanie stawki" 
+C_CHI="汇率录入" C_ARB="دخول الدورات" C_AUS="Rate entry"/>
+<FLD NAM="RNDOPTBAL" X3BLORIG="GCM1_4" X3FLORIG="RNDOPTBAL" IDX="20" TYP="Integer" MEN="2648" 
+MOD="Input" LEN="15" C_FRA="Option d'équilibrage" C_ENG="Balancing option" C_ITA="Opzione quadratura" 
+C_POR="Opção equilibrar" C_SPA="Opción de equilibrado" C_BRI="Balancing option" C_GER="Abgleichsoption" 
+C_POL="Sposób bilansowania" C_CHI="平衡选项" C_ARB="خيار الموازنة" C_AUS="Balancing option"/>
+</GRP>
+<GRP NAM="GCM1_5" TYB="Table" DIM="10" IDTAB="GCM1~NBRCTL" OPT="IAD">
+<FLD NAM="LED1" X3BLORIG="GCM1_5" X3FLORIG="LED1" IDX="22" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Référentiel 1" C_ENG="Ledger 1" C_ITA="Riferimento 1" C_POR="Referencial 1" C_SPA="Referencial 1" 
+C_BRI="Reference 1" C_GER="Buchungskreis 1" C_POL="Księga dodatkowa 1" C_CHI="账册1" C_ARB="مرجغية 1" 
+C_AUS="Ledger 1"/>
+<FLD NAM="LED2" X3BLORIG="GCM1_5" X3FLORIG="LED2" IDX="23" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Référentiel 2" C_ENG="Ledger 2" C_ITA="Riferimento 2" C_POR="Referencial 2" C_SPA="Referencial 2" 
+C_BRI="Reference 2" C_GER="Buchungskreis 2" C_POL="Księga dodatkowa 2" C_CHI="账册2" C_ARB="مرجعية 2" 
+C_AUS="Ledger 2"/>
+<FLD NAM="CTLTYP" X3BLORIG="GCM1_5" X3FLORIG="CTLTYP" IDX="24" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Type contrôle" C_ENG="Control type" C_ITA="Tipo controllo" C_POR="Tipo controlo" 
+C_SPA="Tipo control" C_BRI="Control Type" C_GER="Prüfart" C_POL="Typ kontroli" C_CHI="控制类型" 
+C_ARB="نوع التحقق" C_AUS="Control type"/>
+</GRP>
+<GRP NAM="ADXTEC" TYB="List" DIM="1">
+<FLD NAM="WW_MODSTAMP" TYP="Char" MOD="Input" LEN="20" IDX="25"/>
+<FLD NAM="WW_MODUSER" TYP="Char" MOD="Display" LEN="20" IDX="26"/>
+</GRP>
+ </ADXDATA>
+ <ADXKEY>
+<GRP NAM="LEFTLIST" DIM="10000">
+<FLD NAM="GCM" MOD="Display" TYP="Char" LEN="3" C_FRA="Modèle comptable" C_ENG="Account core model" 
+C_ITA="Modello contabile" C_POR="Mod. contabilístico" C_SPA="Modelo contable" C_BRI="Accounting model" 
+C_GER="Buchhaltungsmodell" C_POL="Model księgowy" C_CHI="会计核心模型" C_ARB="نموذج المحاسبة" 
+C_AUS="Account core model"/>
+<FLD NAM="TEXTE" MOD="Display" TYP="Char" LEN="80" C_FRA="Intitulé" C_ENG="Description" 
+C_ITA="Descrizione" C_POR="Descr." C_SPA="Descripción" C_BRI="Description" C_GER="Bezeichnung" 
+C_POL="Opis" C_CHI="标题" C_ARB="العنوان" C_AUS="Description"/>
+<FLD NAM="GENLEDTYP" MOD="Display" MEN="2644" TYP="Char" LEN="10" C_FRA="Type GL général principal" 
+C_ENG="Main general ledger type" C_ITA="Tipo riferimento generale principale" 
+C_POR="Tipo referencial geral principal" C_SPA="Tipo libro mayor general principal" 
+C_BRI="Main type of general reference" C_GER="Hauptbuchungskreistyp" C_POL="Typ Księgi Glównej" 
+C_CHI="主要总账类型 " C_ARB="نوع مرجع العام الرئيسي" C_AUS="Main general ledger type"/>
+<FLD NAM="ANALEDTYP" MOD="Display" MEN="2644" TYP="Char" LEN="10" C_FRA="Type GL analytique principal" 
+C_ENG="Main analytical ledger type" C_ITA="Tipo riferimento analitica principale" 
+C_POR="Tipo de referencial analítico principal" C_SPA="Tipo libro mayor analítico principal" 
+C_BRI="Main type of analytical reference" C_GER="Kostenrechnungsbuchungskreistyp" 
+C_POL="Typ analitycznej Księgo Głównej" C_CHI="主要分析账类型 " C_ARB="نوع مرجع التحليلي الرئيسي" 
+C_AUS="Main analytical ledger type"/>
+</GRP>
+ </ADXKEY>
+ <ADXMEN>
+<MNU NO="1">
+<VAL IND="1" C_FRA="Non" C_ENG="No" C_ITA="No" C_POR="Não" C_SPA="No" C_BRI="No" C_GER="Nein" 
+C_POL="Nie" C_CHI="否" C_ARB="كلا" C_AUS="No"/>
+<VAL IND="2" C_FRA="Oui" C_ENG="Yes" C_ITA="Si" C_POR="Sim" C_SPA="Sí" C_BRI="Yes" C_GER="Ja" 
+C_POL="Tak" C_CHI="是" C_ARB="نعم" C_AUS="Yes"/>
+</MNU>
+<MNU NO="202">
+<VAL IND="1" C_FRA="Cours du jour" C_ENG="Daily rate" C_ITA="Cambio del giorno" C_POR="Câmbio do dia" 
+C_SPA="Cambio día" C_BRI="Daily rate" C_GER="Tageskurs" C_POL="Stawka dzienna" C_CHI="日汇率" 
+C_AUS="Daily rate"/>
+<VAL IND="2" C_FRA="Cours du mois" C_ENG="Monthly rate" C_ITA="Cambio del mese" C_POR="Câmbio do mês" 
+C_SPA="Cambio mes" C_BRI="Monthly rate" C_GER="Monatskurs" C_POL="Stawka miesięczna" C_CHI="月汇率" 
+C_AUS="Monthly rate"/>
+<VAL IND="3" C_FRA="Cours moyen" C_ENG="Average rate" C_ITA="Cambio medio" C_POR="Câmbio médio" 
+C_SPA="Cambio medio" C_BRI="Average rate" C_GER="Durchschnittskurs" C_POL="Stawka średnia" C_CHI="平均汇率" 
+C_AUS="Average rate"/>
+<VAL IND="4" C_FRA="Cours DEB" C_ENG="Customs doc file exchange" C_ITA="Cambio Intrastat" 
+C_POR="Câmbio DEB" C_SPA="Cambio DEB" C_BRI="Customs doc file exchange" C_GER="Intrastat-Kurs" 
+C_POL="Wymiana pliku dokumentu celnego" C_CHI="海关完税凭证汇率" C_ARB="DEB خلال" 
+C_AUS="Customs doc file exchange"/>
+<VAL IND="5" C_FRA="Cours CEE" C_ENG="EEC Rate" C_POR="Câmbio UE" C_SPA="Cambio CEE" C_BRI="EEC Rate" 
+C_GER="EWG-Kurs" C_POL="Stawka UE" C_CHI="UE汇率" C_AUS="EEC Rate"/>
+</MNU>
+<MNU NO="2644">
+<VAL IND="1" C_FRA="Social" C_ENG="Legal" C_ITA="Generale" C_POR="Social" C_SPA="Social" C_BRI="Legal" 
+C_GER="Hauptbuch" C_POL="Księga Główna" C_CHI="法定的" C_ARB="إجتماعي" C_AUS="Legal"/>
+<VAL IND="2" C_FRA="Analytique" C_ENG="Analytical" C_ITA="Analitico" C_POR="Analítico" C_SPA="Analítico" 
+C_BRI="Analytical" C_GER="Kostenrechnung" C_POL="Księga Analityczna (dodatkowa)" C_CHI="分析的" 
+C_ARB="تحليلي" C_AUS="Analytical"/>
+<VAL IND="3" C_FRA="IAS" C_ENG="IAS" C_ITA="IAS" C_POR="IAS" C_SPA="IAS" C_BRI="IAS" C_GER="IAS" 
+C_POL="MSR" C_CHI="国际会计标准" C_ARB="IAS" C_AUS="IAS"/>
+<VAL IND="4" C_FRA="Groupe" C_ENG="Group" C_ITA="PC 4" C_POR="Ref. 4" C_SPA="Ref 4" C_BRI="Ledg 4" 
+C_GER="Gruppe" C_POL="Dodatkowa księga 4" C_CHI="账册4" C_ARB="مرجع 4" C_AUS="Group"/>
+<VAL IND="5" C_FRA="Devise" C_ENG="Ledger 5" C_ITA="PC 5" C_POR="Ref. 5" C_SPA="Ref 5" C_BRI="Ledg 5" 
+C_GER="Buch 5" C_POL="Dodatkowa księga 5" C_CHI="账册5" C_ARB="مرجع 5" C_AUS="Ledger 5"/>
+<VAL IND="6" C_FRA="Réf 6" C_ENG="Ledger 6" C_ITA="PC 6" C_POR="Ref. 6" C_SPA="Ref 6" C_BRI="Ledg 6" 
+C_GER="Buch 6" C_POL="Dodatkowa księga 6" C_CHI="账册6" C_ARB="مرجع 6" C_AUS="Ledger 6"/>
+<VAL IND="7" C_FRA="Réf 7" C_ENG="Ledger 7" C_ITA="PC 7" C_POR="Ref. 7" C_SPA="Ref 7" C_BRI="Ledg 7" 
+C_GER="Buch 7" C_POL="Dodatkowa księga 7" C_CHI="账册7" C_ARB="مرجع 7" C_AUS="Ledger 7"/>
+<VAL IND="8" C_FRA="Réf 8" C_ENG="Ledger 8" C_ITA="PC 8" C_POR="Ref. 8" C_SPA="Ref 8" C_BRI="Ledg 8" 
+C_GER="Buch 8" C_POL="Dodatkowa księga 8" C_CHI="账册8" C_ARB="مرجع 8" C_AUS="Ledger 8"/>
+<VAL IND="9" C_FRA="Réf 9" C_ENG="Ledger 9" C_ITA="PC 9" C_POR="Ref. 9" C_SPA="Ref 9" C_BRI="Ledg 9" 
+C_GER="Buch 9" C_POL="Dodatkowa księga 9" C_CHI="账册9" C_ARB="مرجع 9" C_AUS="Ledger 9"/>
+<VAL IND="10" C_FRA="Réf 10" C_ENG="Ledger 10" C_ITA="PC 10" C_POR="Ref. 10" C_SPA="Ref 10" 
+C_BRI="Ledg 10" C_GER="Buch 10" C_POL="Dodatkowa księga 10" C_CHI="账册10" C_ARB="مرجع 10" 
+C_AUS="Ledger 10"/>
+</MNU>
+<MNU NO="2645">
+<VAL IND="1" C_FRA="Multiplicateur" C_ENG="Multiplier" C_ITA="Moltiplicatore" C_POR="Multiplicador" 
+C_SPA="Multiplicador" C_BRI="Multiplier" C_GER="Multiplikator" C_POL="Mnożnik" C_CHI="乘法" C_ARB="مضاعف" 
+C_AUS="Multiplier"/>
+<VAL IND="2" C_FRA="Diviseur" C_ENG="Divisor" C_ITA="Divisore" C_POR="Divisor" C_SPA="Divisor" 
+C_BRI="Divisor" C_GER="Divisor" C_POL="Dzielnik" C_CHI="除法" C_ARB="قاسم" C_AUS="Divisor"/>
+<VAL IND="3" C_FRA="Les deux" C_ENG="Both" C_ITA="Entrambi" C_POR="Os dois" C_SPA="Los dos" C_BRI="Both" 
+C_GER="Beide" C_POL="Oba" C_CHI="两者兼顾" C_ARB="الإثنين" C_AUS="Both"/>
+</MNU>
+<MNU NO="2648">
+<VAL IND="1" C_FRA="Saupoudrage" C_ENG="Allocation" C_ITA="Ripartizione" C_POR="Repartição" 
+C_SPA="Dispersión" C_BRI="Allocation" C_GER="Verteilung" C_POL="Przypisanie" C_CHI="分散匹配" 
+C_ARB="تنفيض الأتربة" C_AUS="Allocation"/>
+<VAL IND="2" C_FRA="Ecart d'arrondis" C_ENG="Rounding variance" C_ITA="Differenza arrotondamenti" 
+C_POR="Desvios de arredondamento" C_SPA="Diferencia de redondeos" C_BRI="Rounding variance" 
+C_GER="Rundungsabweichung" C_POL="Zaokrąglanie różnic" C_CHI="取整差异" C_ARB="فجوة تقريبية" 
+C_AUS="Rounding variance"/>
+</MNU>
+ </ADXMEN>
+ <ADXSER>
+<MET ID="READ" C_FRA="Lire" C_ENG="Read" C_ITA="Leggi" C_POR="Ler" C_SPA="Leer" C_BRI="Read" 
+C_GER="Lesen" C_POL="Odczyt" C_CHI="读取" C_ARB="قراءة" C_AUS="Read"/>
+<MET ID="CREATE" C_FRA="Créer" C_ENG="Create" C_ITA="Crea" C_POR="Criar" C_SPA="Crear" C_BRI="Create" 
+C_GER="Anlegen" C_POL="Utwórz" C_CHI="创建" C_ARB="خلق" C_AUS="Create"/>
+<MET ID="MODIFY" C_FRA="Modifier" C_ENG="Modify" C_ITA="Modifica" C_POR="Modificar" C_SPA="Modificar" 
+C_BRI="Modify" C_GER="Ändern" C_POL="Modyfikuj" C_CHI="修改" C_ARB="تعديل" C_AUS="Modify"/>
+<MET ID="DELETE" C_FRA="Supprimer" C_ENG="Delete" C_ITA="Elimina" C_POR="Suprimir" C_SPA="Borrar" 
+C_BRI="Delete" C_GER="Löschen" C_POL="Usuń" C_CHI="删除" C_ARB="إلغاء" C_AUS="Delete"/>
+<MET ID="LIST" C_FRA="Liste" C_ENG="List" C_ITA="Lista" C_POR="Lista" C_SPA="Lista" C_BRI="List" 
+C_GER="Liste" C_POL="Lista" C_CHI="列表" C_ARB="لائحة" C_AUS="List"/>
+ </ADXSER>
+<ADXREAD TAB="GACM"><GRP DIM="1" NAM="KEYS">
+<FLD NAM="GCM" TYP="Char" MOD="Input" LEN="3" C_FRA="Modèle comptable" C_ENG="Account core model" 
+C_ITA="Modello contabile" C_POR="Mod. contabilístico" C_SPA="Modelo contable" C_BRI="Accounting model" 
+C_GER="Buchhaltungsmodell" C_POL="Model księgowy" C_CHI="会计核心模型" C_ARB="نموذج المحاسبة" 
+C_AUS="Account core model"/>
+ </GRP></ADXREAD>
+</ADXDOC>
