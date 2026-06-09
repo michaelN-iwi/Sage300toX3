@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Sage300.SDK/Sage300API.SDK.csproj" />
   <Project Path="SageX3.SDK/SageX3.SDK.csproj" />
+  <Project Path="Migration.Core/Migration.Core.csproj" />
   <Project Path="Sage300toX3.Console/Sage300toX3.Console.csproj" />
 </Solution>
