@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="../Sage300.SDK/Sage300API.SDK.csproj" />
     <ProjectReference Include="../SageX3.SDK/SageX3.SDK.csproj" />
+    <ProjectReference Include="../Migration.Core/Migration.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

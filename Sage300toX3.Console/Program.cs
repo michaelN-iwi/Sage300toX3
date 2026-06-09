@@ -1,4 +1,8 @@
 using Microsoft.Extensions.Configuration;
+using Migration.Core.Mappers;
+using Migration.Core.Options;
+using Migration.Core.Transformation;
+using Migration.Core.Validation;
 using Sage300API.SDK.Core;
 using Sage300toX3.ConsoleApp;
 using SageX3.SDK.Core;
@@ -25,6 +29,16 @@ var migrationOptions = configuration
     .Get<MigrationOptions>()
     ?? new MigrationOptions();
 
+var x3Defaults = configuration
+    .GetSection("X3Defaults")
+    .Get<X3DefaultValuesOptions>()
+    ?? new X3DefaultValuesOptions();
+
+var mappingOptions = configuration
+    .GetSection("Mappings")
+    .Get<MigrationMappingOptions>()
+    ?? new MigrationMappingOptions();
+
 sageX3Options.Validate();
 
 Console.WriteLine("Sage 300 -> Sage X3 Migration");
@@ -44,12 +58,29 @@ var customerService = new X3CustomerService(
     migrationOptions.CustomerOptionalFieldCapacity);
 var shipToCustomerService = new X3ShipToCustomerService(x3WebServiceClient);
 
+var transformer = new ValueTransformer(mappingOptions, x3Defaults);
+var optionalFieldMapper = new CustomerOptionalFieldMapper(transformer);
+var customerCategoryMapper = new CustomerCategoryMapper(transformer, x3Defaults);
+var customerMapper = new CustomerMapper(transformer, x3Defaults, optionalFieldMapper);
+var shipToCustomerMapper = new ShipToCustomerMapper(transformer, x3Defaults);
+var sourceValidator = new CustomerSourceValidator();
+
 Console.WriteLine("X3 services ready:");
 Console.WriteLine("- S300BCG  Customer Category");
-Console.WriteLine("- S300BPC     Customer, including embedded optional fields");
+Console.WriteLine("- S300BPC  Customer, including embedded optional fields");
 Console.WriteLine("- S300BPD  Ship-to Customer / BPD");
 Console.WriteLine();
 
+Console.WriteLine("Migration.Core ready:");
+Console.WriteLine("- CustomerCategoryMapper");
+Console.WriteLine("- CustomerMapper");
+Console.WriteLine("- CustomerOptionalFieldMapper");
+Console.WriteLine("- ShipToCustomerMapper");
+Console.WriteLine("- CustomerSourceValidator");
+Console.WriteLine();
+
+// Manual smoke-test example. Keep this section for direct X3 testing.
+// Replace CustomerNumber before each run to avoid duplicate-record messages.
 Console.WriteLine("Running X3 smoke test: S300BPC...");
 
 var customer = new X3CustomerDto
@@ -89,7 +120,7 @@ var customer = new X3CustomerDto
     }
 };
 
-Console.WriteLine(customer.ToX3Xml());
+Console.WriteLine(customer.ToX3Xml(migrationOptions.CustomerOptionalFieldCapacity));
 
 var customerResult =
     await customerService.SaveAsync(customer);

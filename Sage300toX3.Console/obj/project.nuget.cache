@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fvc2VLR17bA=",
+  "dgSpecHash": "HImJPFvW//M=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\IWIProjects\\Sage300toX3_Git\\Sage300toX3.Console\\Sage300toX3.Console.csproj",
+  "projectFilePath": "D:\\Projects\\IWIProjects\\Sage300toX3_updated_mapping_validation_transformation\\Sage300toX3\\Sage300toX3.Console\\Sage300toX3.Console.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ErduindelRioIznaga\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0\\microsoft.extensions.configuration.10.0.0.nupkg.sha512",
     "C:\\Users\\ErduindelRioIznaga\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.0\\microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",
