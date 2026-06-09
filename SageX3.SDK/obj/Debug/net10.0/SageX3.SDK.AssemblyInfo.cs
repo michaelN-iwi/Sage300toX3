@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SageX3.SDK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec88a7a9cfc8ae3d227f5eeee2b74fc70e5b8565")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SageX3.SDK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SageX3.SDK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,8 +17,8 @@ public sealed class X3ShipToCustomerService
     }
 
     public Task<SageX3WebServiceResult> SaveAsync(
-     X3ShipToCustomerDto shipToCustomer,
-     CancellationToken cancellationToken = default)
+        X3ShipToCustomerDto shipToCustomer,
+        CancellationToken cancellationToken = default)
     {
         shipToCustomer.Validate();
 

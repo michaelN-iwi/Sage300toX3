@@ -54,6 +54,8 @@ public sealed class X3ShipToCustomerDto
 
     public string ToX3Xml()
     {
+        Validate();
+
         return new SageX3XmlBuilder()
             .BeginObject()
                 .BeginGroup("BPD0_1")
@@ -119,45 +121,32 @@ public sealed class X3ShipToCustomerDto
 
     public void Validate()
     {
-        Required(CustomerNumber, nameof(CustomerNumber));
-        Required(ShipToCode, nameof(ShipToCode));
-        Required(Language, nameof(Language));
-        Required(NameLine1, nameof(NameLine1));
-        Required(TaxRule, nameof(TaxRule));
-        Required(Country, nameof(Country));
-        Required(AddressDescription, nameof(AddressDescription));
-        Required(AddressLine1, nameof(AddressLine1));
-        Required(City, nameof(City));
+        SageX3Validation.Required(CustomerNumber, nameof(CustomerNumber));
+        SageX3Validation.Required(ShipToCode, nameof(ShipToCode));
+        SageX3Validation.Required(Language, nameof(Language));
+        SageX3Validation.Required(NameLine1, nameof(NameLine1));
+        SageX3Validation.Required(TaxRule, nameof(TaxRule));
+        SageX3Validation.Required(Country, nameof(Country));
+        SageX3Validation.Required(AddressDescription, nameof(AddressDescription));
+        SageX3Validation.Required(AddressLine1, nameof(AddressLine1));
+        SageX3Validation.Required(City, nameof(City));
 
-        Max(CustomerNumber, 15, nameof(CustomerNumber));
-        Max(ShipToCode, 5, nameof(ShipToCode));
-        Max(Language, 3, nameof(Language));
-        Max(NameLine1, 35, nameof(NameLine1));
-        Max(NameLine2, 35, nameof(NameLine2));
-        Max(AddressDescription, 20, nameof(AddressDescription));
-        Max(Country, 3, nameof(Country));
-        Max(AddressLine1, 50, nameof(AddressLine1));
-        Max(AddressLine2, 50, nameof(AddressLine2));
-        Max(AddressLine3, 50, nameof(AddressLine3));
-        Max(PostalCode, 10, nameof(PostalCode));
-        Max(City, 40, nameof(City));
-        Max(StateProvince, 35, nameof(StateProvince));
-        Max(Phone1, 20, nameof(Phone1));
-        Max(Phone2, 20, nameof(Phone2));
-        Max(Email1, 80, nameof(Email1));
-        Max(Email2, 80, nameof(Email2));
-    }
-
-    private static void Required(string? value, string fieldName)
-    {
-        if (string.IsNullOrWhiteSpace(value))
-            throw new InvalidOperationException($"Missing required field: {fieldName}");
-    }
-
-    private static void Max(string? value, int maxLength, string fieldName)
-    {
-        if (!string.IsNullOrEmpty(value) && value.Length > maxLength)
-            throw new InvalidOperationException(
-                $"Field {fieldName} exceeds max length {maxLength}. Current length: {value.Length}");
+        SageX3Validation.Max(CustomerNumber, 15, nameof(CustomerNumber));
+        SageX3Validation.Max(ShipToCode, 5, nameof(ShipToCode));
+        SageX3Validation.Max(Language, 3, nameof(Language));
+        SageX3Validation.Max(NameLine1, 35, nameof(NameLine1));
+        SageX3Validation.Max(NameLine2, 35, nameof(NameLine2));
+        SageX3Validation.Max(AddressDescription, 20, nameof(AddressDescription));
+        SageX3Validation.Max(Country, 3, nameof(Country));
+        SageX3Validation.Max(AddressLine1, 50, nameof(AddressLine1));
+        SageX3Validation.Max(AddressLine2, 50, nameof(AddressLine2));
+        SageX3Validation.Max(AddressLine3, 50, nameof(AddressLine3));
+        SageX3Validation.Max(PostalCode, 10, nameof(PostalCode));
+        SageX3Validation.Max(City, 40, nameof(City));
+        SageX3Validation.Max(StateProvince, 35, nameof(StateProvince));
+        SageX3Validation.Max(Phone1, 20, nameof(Phone1));
+        SageX3Validation.Max(Phone2, 20, nameof(Phone2));
+        SageX3Validation.Max(Email1, 80, nameof(Email1));
+        SageX3Validation.Max(Email2, 80, nameof(Email2));
     }
 }

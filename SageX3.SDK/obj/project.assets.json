@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\IWIProjects\\Sage300toX3_Git\\SageX3.SDK\\SageX3.SDK.csproj",
+      "projectUniqueName": "D:\\Projects\\IWIProjects\\Sage300toX3_updated_mapping_validation_transformation\\Sage300toX3\\SageX3.SDK\\SageX3.SDK.csproj",
       "projectName": "SageX3.SDK",
-      "projectPath": "D:\\Projects\\IWIProjects\\Sage300toX3_Git\\SageX3.SDK\\SageX3.SDK.csproj",
+      "projectPath": "D:\\Projects\\IWIProjects\\Sage300toX3_updated_mapping_validation_transformation\\Sage300toX3\\SageX3.SDK\\SageX3.SDK.csproj",
       "packagesPath": "C:\\Users\\ErduindelRioIznaga\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\IWIProjects\\Sage300toX3_Git\\SageX3.SDK\\obj\\",
+      "outputPath": "D:\\Projects\\IWIProjects\\Sage300toX3_updated_mapping_validation_transformation\\Sage300toX3\\SageX3.SDK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
