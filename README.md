@@ -1,25 +1,42 @@
-# SageX3.SDK
+# Sage 300 to Sage X3 Migration
 
-This project contains the Sage X3 SOAP Web Service layer for the Sage 300 to Sage X3 migration.
+Initial migration scope:
 
-## Web services currently supported
+| Area                           | Web Service / Public Name | X3 Object         | X3 Alias | DTO Class               | Service Class               |
+| ------------------------------ | ------------------------: | ----------------- | -------- | ----------------------- | --------------------------- |
+| Customer Groups                |                 `S300BCG` | Customer Category | `BCG`    | `X3CustomerCategoryDto` | `X3CustomerCategoryService` |
+| Customers                      |                 `S300BPC` | Customer          | `BPC`    | `X3CustomerDto`         | `X3CustomerService`         |
+| Ship-to Customers              |                 `S300BPD` | Ship-to Customer  | `BPD`    | `X3ShipToCustomerDto`   | `X3ShipToCustomerService`   |
+| Companies                      |                 `S300CPY` | Company           | `CPY`    | `X3CompanyDto`          | `X3CompanyService`          |
+| Sites                          |                 `S300FCY` | Site              | `FCY`    | `X3SiteDto`             | `X3SiteService`             |
+| Dimension Types                |                 `S300DIE` | Dimension Type    | `DIE`    | `X3DimensionTypeDto`    | `X3DimensionTypeService`    |
+| Dimensions / Analytical Values |                 `S300CCE` | Dimension Value   | `CCE`    | `X3DimensionValueDto`   | `X3DimensionValueService`   |
+| Ledgers                        |                 `S300LED` | Ledger            | `LED`    | `X3LedgerDto`           | `X3LedgerService`           |
+| Ledger Groups                  |                 `S300GCM` | Ledger Group      | `GCM`    | `X3LedgerGroupDto`      | `X3LedgerGroupService`      |
+| Fiscal Years                   |                 `S300FIY` | Fiscal Year       | `FIY`    | `X3FiscalYearDto`       | `X3FiscalYearService`       |
+| Periods                        |                 `S300PER` | Period            | `PER`    | `X3PeriodDto`           | `X3PeriodService`           |
 
-| Public name | X3 object | Alias | Purpose |
-|---|---|---|---|
-| S300BCG | Customer Category | BCG | Sage 300 Customer Groups |
-| S300BPC | Customer | BPC | Sage 300 Customers |
-| S300BPD | Ship-to Customer | BPD | Sage 300 Customer contacts / ship-to addresses |
 
-## Payload convention
+## Configuration
 
-Payloads are generated as Sage X3 object Web Service XML:
+Runtime values are loaded from:
 
-```xml
-<PARAM>
-  <GRP ID="BPC0_1">
-    <FLD NAME="BPCNUM">...</FLD>
-  </GRP>
-</PARAM>
+```text
+Sage300toX3.Console/appsettings.json
 ```
 
-Fields and groups were aligned with the uploaded X3 metadata XML files in `/Metadata`.
+Current X3 values configured:
+
+```json
+"SageX3": {
+  "EndpointUrl": "http://172.16.0.66:8124/soap-generic/syracuse/collaboration/syracuse/CAdxWebServiceXmlCC",
+  "Language": "ENG",
+  "PoolAlias": "S300"
+}
+```
+
+## Notes
+
+- `SageX3WebServiceClient.SaveAsync()` is used for X3 object web services.
+- `SageX3WebServiceClient.RunAsync()` remains available for X3 subprogram web services.
+- The SOAP payload wraps `objectXml` / `inputXml` in CDATA to avoid escaping issues.
