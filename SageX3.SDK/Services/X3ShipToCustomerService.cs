@@ -7,7 +7,7 @@ namespace SageX3.SDK.Services;
 public sealed class X3ShipToCustomerService
     : IX3ShipToCustomerService
 {
-    private const string PublicName = "S300STCRM";
+    private const string PublicName = "S300BPD";
     private readonly SageX3WebServiceClient _client;
 
     public X3ShipToCustomerService(

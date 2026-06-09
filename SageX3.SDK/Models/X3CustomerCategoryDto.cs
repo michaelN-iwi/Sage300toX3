@@ -3,8 +3,8 @@ using SageX3.SDK.Core;
 namespace SageX3.SDK.Models;
 
 /// <summary>
-/// Sage X3 Customer Category object BCG. Web service public name: S300CRMCAT.
-/// Source metadata file: S300CRMCAT.xml.
+/// Sage X3 Customer Category object BCG. Web service public name: S300BCG.
+/// Source metadata file: S300BCG.xml.
 /// </summary>
 public sealed class X3CustomerCategoryDto
 {

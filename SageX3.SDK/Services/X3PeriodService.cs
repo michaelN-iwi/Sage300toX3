@@ -4,25 +4,24 @@ using SageX3.SDK.Models;
 
 namespace SageX3.SDK.Services;
 
-public sealed class X3CustomerCategoryService
-    : IX3CustomerCategoryService
+public sealed class X3PeriodService
+    : IX3PeriodService
 {
-    private const string PublicName = "S300BCG";
+    private const string PublicName = "S300PER";
     private readonly SageX3WebServiceClient _client;
 
-    public X3CustomerCategoryService(
-        SageX3WebServiceClient client)
+    public X3PeriodService(SageX3WebServiceClient client)
     {
         _client = client;
     }
 
     public Task<SageX3WebServiceResult> SaveAsync(
-        X3CustomerCategoryDto category,
+        X3PeriodDto dto,
         CancellationToken cancellationToken = default)
     {
         return _client.SaveAsync(
             PublicName,
-            category.ToX3Xml(),
+            dto.ToX3Xml(),
             cancellationToken);
     }
 }

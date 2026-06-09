@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ADXDOC PNA="S300LED" NAM="OLED" TIM="20260609171800" OBJ="LED" FOL="SEED" SOL="X3ERPV12" 
+WRP="WJS300LED" USER="ERPUS" VER="6.30" HEAD="1">
+ <ADXDATA>
+<GRP NAM="LED1_1" TYB="List" DIM="1">
+<FLD NAM="LED" X3BLORIG="LED1_1" X3FLORIG="LED" IDX="1" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Référentiel" C_ENG="Ledger" C_ITA="Riferimento" C_POR="Referencial" C_SPA="Referencial" 
+C_BRI="Ledger" C_GER="Buchungskreis" C_POL="Księga" C_CHI="账册" C_ARB="مرجعية" C_AUS="Ledger"/>
+<FLD NAM="ZLED" X3BLORIG="LED1_1" X3FLORIG="ZLED" IDX="2" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="DESTRA" X3BLORIG="LED1_1" X3FLORIG="DESTRA" IDX="3" TYP="Char" MOD="Input" LEN="30" 
+C_FRA="Désignation" C_ENG="Description" C_ITA="Descrizione" C_POR="Designação" C_SPA="Descripción" 
+C_BRI="Description" C_GER="Bezeichnung" C_POL="Opis" C_CHI="描述" C_ARB="الوصف" C_AUS="Description"/>
+</GRP>
+<GRP NAM="LED1_2" TYB="List" DIM="1">
+<FLD NAM="SHOTRA" X3BLORIG="LED1_2" X3FLORIG="SHOTRA" IDX="4" TYP="Char" MOD="Input" LEN="12" 
+C_FRA="Intitulé court" C_ENG="Short description" C_ITA="Descr. breve" C_POR="Desc. curta" 
+C_SPA="Descrip. corta" C_BRI="Short title" C_GER="Kurzbezeichnung" C_POL="Krótki tytuł" C_CHI="简称" 
+C_ARB="وصف قصير" C_AUS="Short description"/>
+<FLD NAM="LEG" X3BLORIG="LED1_2" X3FLORIG="LEG" IDX="5" TYP="Char" MOD="Input" LEN="20" 
+C_FRA="Législation" C_ENG="Legislation" C_ITA="Legislazione" C_POR="Legislação" C_SPA="Legislación" 
+C_BRI="Legislation" C_GER="Rechtsordnung" C_POL="Legislacja" C_CHI="准则" C_ARB="تشريعات" 
+C_AUS="Legislation"/>
+<FLD NAM="ZLEG" X3BLORIG="LED1_2" X3FLORIG="ZLEG" IDX="6" TYP="Char" MOD="Display" LEN="30"/>
+</GRP>
+<GRP NAM="LED1_3" TYB="List" DIM="1">
+<FLD NAM="GEN" X3BLORIG="LED1_3" X3FLORIG="GEN" IDX="7" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Général" C_ENG="General" C_ITA="Generale" C_POR="Geral" C_SPA="General" C_BRI="General" 
+C_GER="Allgemein" C_POL="Ogólne" C_CHI="常规" C_ARB="العام" C_AUS="General"/>
+<FLD NAM="ANA" X3BLORIG="LED1_3" X3FLORIG="ANA" IDX="8" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Analytique" C_ENG="Analytical" C_ITA="Analitica" C_POR="Analítica" C_SPA="Analítica" 
+C_BRI="Analysis" C_GER="Kostenrechnung" C_POL="Analityka" C_CHI="分析" C_ARB="تحليلي" C_AUS="Analytical"/>
+<FLD NAM="BUD" X3BLORIG="LED1_3" X3FLORIG="BUD" IDX="9" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Budget" C_ENG="Budget" C_ITA="Budget" C_POR="Orçamento" C_SPA="Presupuesto" C_BRI="Budget" 
+C_GER="Budget" C_POL="Budżet" C_CHI="预算" C_ARB="الميزانية" C_AUS="Budget"/>
+<FLD NAM="GDD" X3BLORIG="LED1_3" X3FLORIG="GDD" IDX="10" TYP="Integer" MEN="1" MOD="Input" LEN="20" 
+C_FRA="Budgets opérationnels" C_ENG="Operating budgets" C_ITA="Budget operativi" 
+C_POR="Orçamentos operacionais" C_SPA="Presupuestos operativos" C_BRI="Operating Budgets" 
+C_GER="Betriebliche Budgets" C_POL="Budżety operacyjne" C_CHI="运营预算" C_ARB="ميزانيات التشغيلية" 
+C_AUS="Operating budgets"/>
+<FLD NAM="CMM" X3BLORIG="LED1_3" X3FLORIG="CMM" IDX="11" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Engagement" C_ENG="Commitment" C_ITA="Impegno" C_POR="Cabimentação" C_SPA="Compromiso" 
+C_BRI="Commitment" C_GER="Bestellobligo" C_POL="Zobowiązanie" C_CHI="承诺" C_ARB="الإلتزام" 
+C_AUS="Commitment"/>
+<FLD NAM="PJMFLG" X3BLORIG="LED1_3" X3FLORIG="PJMFLG" IDX="12" TYP="Integer" MEN="1" MOD="Input" 
+LEN="20" C_FRA="Gestion à l'affaire" C_ENG="Project management" C_ITA="Gestione trattativa" 
+C_POR="Gestão p/negócio" C_SPA="Gestión de proyectos" C_BRI="Project management" 
+C_GER="Projektmanagement" C_POL="Zarzadzanie projektami" C_CHI="项目管理" C_ARB="دارة العمل" 
+C_AUS="Project management"/>
+<FLD NAM="CSL" X3BLORIG="LED1_3" X3FLORIG="CSL" IDX="13" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Consolidation" C_ENG="Consolidation" C_ITA="Consolidato" C_POR="Consolidação" 
+C_SPA="Consolidación" C_BRI="Consolidation" C_GER="Konsolidierung" C_POL="Konsolidacja" C_CHI="合并" 
+C_ARB="التوحيد" C_AUS="Consolidation"/>
+<FLD NAM="LEDTYPE" X3BLORIG="LED1_3" X3FLORIG="LEDTYPE" IDX="14" TYP="Integer" MEN="2653" MOD="Input" 
+LEN="15" C_FRA="Type de référentiel" C_ENG="Ledger type" C_ITA="Tipo riferimento" 
+C_POR="Tipo de referencial" C_SPA="Tipo de referencial" C_BRI="Reference type" C_GER="Buchungskreis" 
+C_POL="Typ księgi" C_CHI="账册类型" C_ARB="نوع المرجعية" C_AUS="Ledger type"/>
+</GRP>
+<GRP NAM="LED1_4" TYB="List" DIM="1">
+<FLD NAM="BAL" X3BLORIG="LED1_4" X3FLORIG="BAL" IDX="15" TYP="Integer" MEN="1" MOD="Input" LEN="15" 
+C_FRA="Equilibre" C_ENG="Balance" C_ITA="Quadratura" C_POR="Equilíbrio" C_SPA="Equilibrio" 
+C_BRI="Balance" C_GER="Soll-/Haben-Gleichheit" C_POL="Zbilansowane" C_CHI="余额" C_ARB="توازن" 
+C_AUS="Balance"/>
+<FLD NAM="FCYBAL" X3BLORIG="LED1_4" X3FLORIG="FCYBAL" IDX="16" TYP="Integer" MEN="1" MOD="Input" 
+LEN="15" C_FRA="Equilibre par site" C_ENG="Balance by site" C_ITA="Quadratura per sito" 
+C_POR="Equilíbrio p/estab." C_SPA="Equilib. por planta" C_BRI="Balance by site" 
+C_GER="S/H-Gleichheit pro Standort" C_POL="Zbilansowane wg. lokalizacji" C_CHI="根据地点余额" 
+C_ARB="توازن في الموقع" C_AUS="Balance by site"/>
+<FLD NAM="MTCFLG" X3BLORIG="LED1_4" X3FLORIG="MTCFLG" IDX="17" TYP="Integer" MEN="1" MOD="Input" 
+LEN="20" C_FRA="Lettrage" C_ENG="Matching" C_ITA="Pareggio" C_POR="Conciliação" C_SPA="Marcaje" 
+C_BRI="Matching" C_GER="Zuordnung" C_POL="Uzgadnianie" C_CHI="匹配" C_ARB="مطابقة" C_AUS="Matching"/>
+<FLD NAM="DIEDACOBY" X3BLORIG="LED1_4" X3FLORIG="DIEDACOBY" IDX="18" TYP="Integer" MEN="1" MOD="Input" 
+LEN="25" C_FRA="Saisie d'un axe obligatoire" C_ENG="One dimension required" 
+C_ITA="Inserimento di un asse obbligatorio" C_POR="Reg. de um eixo obrigatório" 
+C_SPA="Sección obligatoria" C_BRI="One dimension required" C_GER="Ein Sektor erforderlich" 
+C_POL="Min. jeden wymiar" C_CHI="至少一个分析元" C_ARB="دخول المحورإلزامي " C_AUS="One dimension required"/>
+<FLD NAM="DIEIPT" X3BLORIG="LED1_4" X3FLORIG="DIEIPT" IDX="19" TYP="Integer" MEN="1" MOD="Input" 
+LEN="30" C_FRA="Stockage lignes sans section" C_ENG="Store lines without dimensions" 
+C_ITA="Movimenti vuoti" C_POR="Gravação das imputações vazias" C_SPA="Almacenar líneas sin secciones" 
+C_BRI="Store lines without dimensions" C_GER="Buchung ohne Sektor zuläss." 
+C_POL="Przechowuj pozycje bez wymiarów" C_CHI="空分析元过账存储" C_ARB="تخزين الإفتراضات الفارغة" 
+C_AUS="Store lines without dimensions"/>
+</GRP>
+<GRP NAM="LED1_5" TYB="List" DIM="1">
+<FLD NAM="COA" X3BLORIG="LED1_5" X3FLORIG="COA" IDX="20" TYP="Char" MOD="Input" LEN="3" 
+C_FRA="Code plan" C_ENG="Chart code" C_ITA="Codice piano" C_POR="Código de conta" C_SPA="Código plan" 
+C_BRI="Plan code" C_GER="Kontenplan" C_POL="Kod planu" C_CHI="会计科目表代码" C_ARB="رمز الخطة" 
+C_AUS="Chart code"/>
+<FLD NAM="ZCOA" X3BLORIG="LED1_5" X3FLORIG="ZCOA" IDX="21" TYP="Char" MOD="Display" LEN="10"/>
+<FLD NAM="DIENBR" X3BLORIG="LED1_5" X3FLORIG="DIENBR" IDX="22" TYP="Integer" MOD="Input" LEN="1" 
+C_FRA="Nb axes" C_ENG="No. of dim. types" C_ITA="N° assi" C_POR="Nr.eixos" C_SPA="N.º ejes" 
+C_BRI="Number of Dimensions" C_GER="Anzahl Dimensionen" C_POL="Liczba wymiarów" C_CHI="分析元数" 
+C_ARB="عدد أنواع الأبعاد" C_AUS="No. of dim. types"/>
+<FLD NAM="DIE" X3BLORIG="LED1_5" X3FLORIG="DIE" IDX="23" TYP="Char" MOD="Input" LEN="3" DIM="9"/>
+<FLD NAM="ZDIE" X3BLORIG="LED1_5" X3FLORIG="ZDIE" IDX="24" TYP="Char" MOD="Display" LEN="30" DIM="9"/>
+</GRP>
+<GRP NAM="LED1_6" TYB="List" DIM="1">
+<FLD NAM="GENTYP" X3BLORIG="LED1_6" X3FLORIG="GENTYP" IDX="25" TYP="Integer" MEN="807" MOD="Input" 
+LEN="15" C_FRA="Type de génération" C_ENG="Generation type" C_ITA="Tipo generazione" 
+C_POR="Tipo de geração" C_SPA="Tipo generación" C_BRI="Generation Type" C_GER="Generierungstyp" 
+C_POL="Typ generowania" C_CHI="生成类型" C_ARB="نوع الإنشاء    نص خاطئ - لا يمكن استخدامه" 
+C_AUS="Generation type"/>
+<FLD NAM="EQLRANANA" X3BLORIG="LED1_6" X3FLORIG="EQLRANANA" IDX="26" TYP="Integer" MEN="1" MOD="Input" 
+LEN="30" C_FRA="Equilibre report à nouveau" C_ENG="Balanced carryforward" C_ITA="Quadratura riapertura" 
+C_POR="Equilíbrio Reporte Ano seg." C_SPA="Apertura saldada" C_BRI="Carryforward balance" 
+C_GER="Vortragsbilanz" C_POL="Zbilansowane przesunięcie" C_CHI="未分配利润平衡" C_ARB="توازن التأجيل من جديد" 
+C_AUS="Balanced carryforward"/>
+<FLD NAM="ENDVCR" X3BLORIG="LED1_6" X3FLORIG="ENDVCR" IDX="27" TYP="Integer" MEN="1" MOD="Input" 
+LEN="30" C_FRA="Pièce de clôture" C_ENG="Closing document" C_ITA="Movimento di chiusura" 
+C_POR="Docum. fecho" C_SPA="Asiento de cierre" C_BRI="Closing Document" C_GER="Abschlussbeleg" 
+C_POL="Aut. księgujący - zamknięcie roku" C_CHI="关闭凭证" C_ARB="جزء الإنتهاء" C_AUS="Closing document"/>
+<FLD NAM="ACCVCR" X3BLORIG="LED1_6" X3FLORIG="ACCVCR" IDX="28" TYP="Integer" MEN="1" MOD="Input" 
+LEN="30" C_FRA="Une pièce par compte" C_ENG="One entry per account" C_ITA="Un movimento per conto" 
+C_POR="Um doc. por conta" C_SPA="Un asiento por cuenta" C_BRI="One entry per account" 
+C_GER="Eine Buchung pro Konto" C_POL="Jeden dowód księgowy na konto" C_CHI="每个科目一个凭证" 
+C_ARB="جزء الحسابي" C_AUS="One entry per account"/>
+</GRP>
+<GRP NAM="ADXTEC" TYB="List" DIM="1">
+<FLD NAM="WW_MODSTAMP" TYP="Char" MOD="Input" LEN="20" IDX="29"/>
+<FLD NAM="WW_MODUSER" TYP="Char" MOD="Display" LEN="20" IDX="30"/>
+</GRP>
+ </ADXDATA>
+ <ADXKEY>
+<GRP NAM="LEFTLIST" DIM="10000">
+<FLD NAM="LED" MOD="Display" TYP="Char" LEN="3" C_FRA="Référentiel" C_ENG="Ledger" C_ITA="Riferimento" 
+C_POR="Referencial" C_SPA="Referencial" C_BRI="Ledger" C_GER="Buchungskreis" C_POL="Księga" C_CHI="账册" 
+C_ARB="مرجعية" C_AUS="Ledger"/>
+<FLD NAM="TEXTE" MOD="Display" TYP="Char" LEN="80" C_FRA="Intitulé" C_ENG="Description" 
+C_ITA="Descrizione" C_POR="Descr." C_SPA="Descripción" C_BRI="Description" C_GER="Bezeichnung" 
+C_POL="Opis" C_CHI="标题" C_ARB="العنوان" C_AUS="Description"/>
+<FLD NAM="LEG" MOD="Display" TYP="Char" LEN="20" C_FRA="Législation" C_ENG="Legislation" 
+C_ITA="Legislazione" C_POR="Legislação" C_SPA="Legislación" C_BRI="Legislation" C_GER="Rechtsordnung" 
+C_POL="Legislacja" C_CHI="准则" C_ARB="تشريعات" C_AUS="Legislation"/>
+<FLD NAM="COA" MOD="Display" TYP="Char" LEN="3" C_FRA="Code plan" C_ENG="Chart code" 
+C_ITA="Codice piano" C_POR="Código de conta" C_SPA="Código plan" C_BRI="Plan code" C_GER="Kontenplan" 
+C_POL="Kod planu" C_CHI="会计科目表代码" C_ARB="رمز الخطة" C_AUS="Chart code"/>
+</GRP>
+ </ADXKEY>
+ <ADXMEN>
+<MNU NO="1">
+<VAL IND="1" C_FRA="Non" C_ENG="No" C_ITA="No" C_POR="Não" C_SPA="No" C_BRI="No" C_GER="Nein" 
+C_POL="Nie" C_CHI="否" C_ARB="كلا" C_AUS="No"/>
+<VAL IND="2" C_FRA="Oui" C_ENG="Yes" C_ITA="Si" C_POR="Sim" C_SPA="Sí" C_BRI="Yes" C_GER="Ja" 
+C_POL="Tak" C_CHI="是" C_ARB="نعم" C_AUS="Yes"/>
+</MNU>
+<MNU NO="807">
+<VAL IND="1" C_FRA="Site" C_ENG="Site" C_ITA="Sito" C_POR="Estab." C_SPA="Planta" C_BRI="Site" 
+C_GER="Standort" C_POL="Lokalizacja" C_CHI="地点" C_ARB="موقع" C_AUS="Site"/>
+<VAL IND="2" C_FRA="Société" C_ENG="Company" C_ITA="Società" C_POR="Socied." C_SPA="Sociedad" 
+C_BRI="Company" C_GER="Unternehmen" C_POL="Firma" C_CHI="公司" C_ARB="شركة" C_AUS="Company"/>
+</MNU>
+<MNU NO="2653">
+<VAL IND="1" C_FRA="Non applicable" C_ENG="Not applicable" C_POR="Não aplicável" C_SPA="No aplica" 
+C_BRI="Not applicable" C_GER="Nicht zutreffend" C_POL="Nie dotyczy" C_ARB="غير قابل للتطبيق" 
+C_AUS="Not applicable"/>
+<VAL IND="2" C_FRA="Base SNC" C_ENG="SNC base" C_POR="Base SNC" C_SPA="Base SNC" C_BRI="SNC base" 
+C_GER="Basis SNC" C_POL="Podstawa SNC" C_ARB="SNC أساس" C_AUS="SNC base"/>
+<VAL IND="3" C_FRA="Normes IAS/IFRS" C_ENG="IAS/IFRS standards" C_POR="Standard IAS/IFRS" 
+C_SPA="Normas IAS/IFRS" C_BRI="IAS/IFRS standards" C_GER="Standards IAS/IFRS" C_POL="Standardy MSR/MSSF" 
+C_ARB="IAS/IFRS المعايير" C_AUS="IAS/IFRS standards"/>
+<VAL IND="4" C_FRA="Micro-entités SNC" C_ENG="SNS micro entities" C_POR="Micro-entidades" 
+C_SPA="Microentidades SNC" C_BRI="SNS micro entities" C_GER="Kleinstunternehmen SNS" 
+C_POL="Mikro-jednostki SNC" C_ARB="SNC الكيانات الصغيرة" C_AUS="SNS micro entities"/>
+<VAL IND="5" C_FRA="Autres" C_ENG="Others" C_POR="Outros" C_SPA="Otros" C_BRI="Others" C_GER="Sonstige" 
+C_POL="Inne" C_ARB="الآخرين" C_AUS="Others"/>
+</MNU>
+ </ADXMEN>
+ <ADXSER>
+<MET ID="READ" C_FRA="Lire" C_ENG="Read" C_ITA="Leggi" C_POR="Ler" C_SPA="Leer" C_BRI="Read" 
+C_GER="Lesen" C_POL="Odczyt" C_CHI="读取" C_ARB="قراءة" C_AUS="Read"/>
+<MET ID="CREATE" C_FRA="Créer" C_ENG="Create" C_ITA="Crea" C_POR="Criar" C_SPA="Crear" C_BRI="Create" 
+C_GER="Anlegen" C_POL="Utwórz" C_CHI="创建" C_ARB="خلق" C_AUS="Create"/>
+<MET ID="MODIFY" C_FRA="Modifier" C_ENG="Modify" C_ITA="Modifica" C_POR="Modificar" C_SPA="Modificar" 
+C_BRI="Modify" C_GER="Ändern" C_POL="Modyfikuj" C_CHI="修改" C_ARB="تعديل" C_AUS="Modify"/>
+<MET ID="DELETE" C_FRA="Supprimer" C_ENG="Delete" C_ITA="Elimina" C_POR="Suprimir" C_SPA="Borrar" 
+C_BRI="Delete" C_GER="Löschen" C_POL="Usuń" C_CHI="删除" C_ARB="إلغاء" C_AUS="Delete"/>
+<MET ID="LIST" C_FRA="Liste" C_ENG="List" C_ITA="Lista" C_POR="Lista" C_SPA="Lista" C_BRI="List" 
+C_GER="Liste" C_POL="Lista" C_CHI="列表" C_ARB="لائحة" C_AUS="List"/>
+ </ADXSER>
+<ADXREAD TAB="GLED"><GRP DIM="1" NAM="KEYS">
+<FLD NAM="LED" TYP="Char" MOD="Input" LEN="3" C_FRA="Référentiel" C_ENG="Ledger" C_ITA="Riferimento" 
+C_POR="Referencial" C_SPA="Referencial" C_BRI="Ledger" C_GER="Buchungskreis" C_POL="Księga" C_CHI="账册" 
+C_ARB="مرجعية" C_AUS="Ledger"/>
+ </GRP></ADXREAD>
+</ADXDOC>

@@ -102,5 +102,32 @@ public sealed class SageX3XmlBuilder
         return this;
     }
 
+
+    public SageX3XmlBuilder BeginList(string name, int size)
+    {
+        _xml.Append("<LST NAME=\"")
+            .Append(SecurityElement.Escape(name))
+            .Append("\" SIZE=\"")
+            .Append(size.ToString(CultureInfo.InvariantCulture))
+            .Append("\">");
+
+        return this;
+    }
+
+    public SageX3XmlBuilder ListItem(string? value)
+    {
+        _xml.Append("<ITM>")
+            .Append(SecurityElement.Escape(value ?? string.Empty))
+            .Append("</ITM>");
+
+        return this;
+    }
+
+    public SageX3XmlBuilder EndList()
+    {
+        _xml.Append("</LST>");
+        return this;
+    }
+
     public string Build() => _xml.ToString();
 }

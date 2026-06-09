@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ADXDOC PNA="S300DIE" NAM="ODIE" TIM="20260609171743" OBJ="DIE" FOL="SEED" SOL="X3ERPV12" 
+WRP="WJS300DIE" USER="ERPUS" VER="6.30" HEAD="1">
+ <ADXDATA>
+<GRP NAM="DIE0_1" TYB="List" DIM="1">
+<FLD NAM="DIE" X3BLORIG="DIE0_1" X3FLORIG="DIE" IDX="1" TYP="Char" MOD="Input" LEN="3" C_FRA="Axe" 
+C_ENG="Dimension type" C_ITA="Asse" C_POR="Eixo" C_SPA="Eje" C_BRI="Dimension type" C_GER="Dimension" 
+C_POL="Wymiar" C_CHI="分析元类型" C_ARB="نوع البعد" C_AUS="Dimension type"/>
+<FLD NAM="ZDIE" X3BLORIG="DIE0_1" X3FLORIG="ZDIE" IDX="2" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="DESTRA" X3BLORIG="DIE0_1" X3FLORIG="DESTRA" IDX="3" TYP="Char" MOD="Input" LEN="30" 
+C_FRA="Libellé" C_ENG="Description" C_ITA="Descrizione" C_POR="Descrição" C_SPA="Descripción" 
+C_BRI="Description" C_GER="Bezeichnung" C_POL="Opis" C_CHI="描述" C_ARB="الوصف" C_AUS="Description"/>
+<FLD NAM="SHOTRA" X3BLORIG="DIE0_1" X3FLORIG="SHOTRA" IDX="4" TYP="Char" MOD="Input" LEN="12" 
+C_FRA="Intitulé court" C_ENG="Short description" C_ITA="Descr. breve" C_POR="Desc. curta" 
+C_SPA="Descrip. corta" C_BRI="Short title" C_GER="Kurzbezeichnung" C_POL="Krótki tytuł" C_CHI="简称" 
+C_ARB="وصف قصير" C_AUS="Short description"/>
+</GRP>
+<GRP NAM="DIE1_1" TYB="List" DIM="1">
+<FLD NAM="COLHEA" X3BLORIG="DIE1_1" X3FLORIG="COLHEA" IDX="5" TYP="Char" MOD="Input" LEN="12" 
+C_FRA="En-tête de colonne" C_ENG="Column header" C_ITA="Testata colonna" C_POR="Cabeç. de coluna" 
+C_SPA="Cabecera columna" C_BRI="Column header" C_GER="Spaltenüberschrift" C_POL="Nagłówek kolumny" 
+C_CHI="列标题" C_ARB="رأس العامود" C_AUS="Column header"/>
+<FLD NAM="ACS" X3BLORIG="DIE1_1" X3FLORIG="ACS" IDX="6" TYP="Char" MOD="Input" LEN="10" 
+C_FRA="Code d'accès" C_ENG="Access code" C_ITA="Codice accesso" C_POR="Código acesso" 
+C_SPA="Cód. de acceso" C_BRI="Access code" C_GER="Zugriffscode" C_POL="Kod dostępu" C_CHI="访问代码" 
+C_ARB="رمز الدخول" C_AUS="Access code"/>
+<FLD NAM="ZACS" X3BLORIG="DIE1_1" X3FLORIG="ZACS" IDX="7" TYP="Char" MOD="Display" LEN="30"/>
+</GRP>
+<GRP NAM="DIE1_2" TYB="List" DIM="1">
+<FLD NAM="CCEFMT" X3BLORIG="DIE1_2" X3FLORIG="CCEFMT" IDX="8" TYP="Char" MOD="Input" LEN="15" 
+C_FRA="Format des sections" C_ENG="Dimension format" C_ITA="Formato delle sezioni" 
+C_POR="Form. das secções" C_SPA="Formato secciones" C_BRI="Dimension format" C_GER="Format Sektortyp" 
+C_POL="Format widoku wymiaru" C_CHI="分析元格式" C_ARB="فرمتت الأقسام" C_AUS="Dimension format"/>
+</GRP>
+<GRP NAM="DIE1_3" TYB="List" DIM="1">
+<FLD NAM="CREAUT" X3BLORIG="DIE1_3" X3FLORIG="CREAUT" IDX="9" TYP="Integer" MEN="1" MOD="Input" LEN="20" 
+C_FRA="Création automatique" C_ENG="Automatic creation" C_ITA="Creazione automatica" 
+C_POR="Criação automática" C_SPA="Creación automática" C_BRI="Automatic creation" 
+C_GER="Automatische Anlage" C_POL="Tworzenie automatyczne" C_CHI="自动创建" C_ARB="إنشاء التلقائي" 
+C_AUS="Automatic creation"/>
+<FLD NAM="PRJMGT" X3BLORIG="DIE1_3" X3FLORIG="PRJMGT" IDX="10" TYP="Integer" MEN="1" MOD="Input" 
+LEN="25" C_FRA="Aucun Report à nouveaux" C_ENG="No carryforward" C_ITA="Nessuna Riapertura" 
+C_POR="Nenhum RAS" C_SPA="Ninguna apertura" C_BRI="No carryforward" C_GER="Kein Vortrag" 
+C_POL="Bez zapisów przenosz. sald" C_CHI="无未分配利润" C_ARB="لا تأجيل من جديد" C_AUS="No carryforward"/>
+<FLD NAM="FLGMODACE" X3BLORIG="DIE1_3" X3FLORIG="FLGMODACE" IDX="11" TYP="Integer" MEN="1" MOD="Input" 
+LEN="30" C_FRA="Modif écritures définitives" C_ENG="Change final entries" 
+C_ITA="Modifica movimenti definitivi" C_POR="Mod. doc. contab. definitivos" 
+C_SPA="Modif apuntes definitivos" C_BRI="Change definitive entries" 
+C_GER="Änderung endgültige Buchungen" C_POL="Zmień wpisy końcowe" C_CHI="最终分录修改" 
+C_ARB="تغيير الكتابات النهائية" C_AUS="Change final entries"/>
+<FLD NAM="ENT" X3BLORIG="DIE1_3" X3FLORIG="ENT" IDX="12" TYP="Integer" MEN="1" MOD="Input" LEN="20" 
+C_FRA="Entité" C_ENG="Entity" C_ITA="Entità" C_POR="Entidade" C_SPA="Entidad" C_BRI="Number" 
+C_GER="Organisationseinheit" C_POL="Jednostka" C_CHI="主体" C_ARB="كيان" C_AUS="Entity"/>
+<FLD NAM="ENV" X3BLORIG="DIE1_3" X3FLORIG="ENV" IDX="13" TYP="Integer" MEN="1" MOD="Input" LEN="20" 
+C_FRA="Enveloppe" C_ENG="Envelope" C_ITA="Stanziamento" C_POR="Pacote orçam." C_SPA="Partida pptaria." 
+C_BRI="Envelope" C_GER="Budgetpool" C_POL="Budżet" C_CHI="信封" C_ARB="مغلّف" C_AUS="Envelope"/>
+<FLD NAM="PJMFLG" X3BLORIG="DIE1_3" X3FLORIG="PJMFLG" IDX="14" TYP="Integer" MEN="1" MOD="Input" 
+LEN="25" C_FRA="Gestion à l'affaire" C_ENG="Project management" C_ITA="Gestione trattativa" 
+C_POR="Gestão p/negócio" C_SPA="Gestión de proyectos" C_BRI="Project management" 
+C_GER="Projektmanagement" C_POL="Zarzadzanie projektami" C_CHI="项目管理" C_ARB="دارة العمل" 
+C_AUS="Project management"/>
+<FLD NAM="PCCFLG" X3BLORIG="DIE1_3" X3FLORIG="PCCFLG" IDX="15" TYP="Integer" MEN="1" MOD="Input" 
+LEN="25" C_FRA="Nature de dépense" C_ENG="Cost type" C_ITA="Natura spesa" C_POR="Natureza despesa" 
+C_SPA="Naturaleza de gastos" C_BRI="Expense nature" C_GER="Kostenart" C_POL="Typ kosztu" C_CHI="费用属性" 
+C_ARB="طبيعة النفقة" C_AUS="Cost type"/>
+</GRP>
+<GRP NAM="DIE2_1" TYB="Table" DIM="10" IDTAB="DIE2~NBRLIG" OPT="">
+<FLD NAM="CCEDES" X3BLORIG="DIE2_1" X3FLORIG="CCEDES" IDX="17" TYP="Integer" MEN="2650" MOD="Display" 
+LEN="50" C_FRA="Sections diverses" C_ENG="Miscellaneous dimensions" C_ITA="Sezioni diverse" 
+C_POR="Secções diversas" C_SPA="Secciones varias" C_BRI="Miscellaneous dimensions" 
+C_GER="Sonstige Sektoren" C_POL="Inne wymiary" C_CHI="杂项分析元" C_ARB="الأقسام المختلفة" 
+C_AUS="Miscellaneous dimensions"/>
+<FLD NAM="CCEMIS" X3BLORIG="DIE2_1" X3FLORIG="CCEMIS" IDX="18" TYP="Char" MOD="Input" LEN="15" 
+C_FRA="Section" C_ENG="Dimension" C_ITA="Sezione" C_POR="Secção" C_SPA="Sección" C_BRI="Dimension" 
+C_GER="Sektor" C_POL="Wartość wymiaru" C_CHI="分析元" C_ARB="البعد المحاسبة" C_AUS="Dimension"/>
+<FLD NAM="ZCCEMIS" X3BLORIG="DIE2_1" X3FLORIG="ZCCEMIS" IDX="19" TYP="Char" MOD="Display" LEN="30"/>
+</GRP>
+<GRP NAM="ADXTEC" TYB="List" DIM="1">
+<FLD NAM="WW_MODSTAMP" TYP="Char" MOD="Input" LEN="20" IDX="20"/>
+<FLD NAM="WW_MODUSER" TYP="Char" MOD="Display" LEN="20" IDX="21"/>
+</GRP>
+ </ADXDATA>
+ <ADXKEY>
+<GRP NAM="LEFTLIST" DIM="10000">
+<FLD NAM="DIE" MOD="Display" TYP="Char" LEN="3" C_FRA="Axe" C_ENG="Dimension type" C_ITA="Asse" 
+C_POR="Eixo" C_SPA="Eje" C_BRI="Dimension type" C_GER="Dimension" C_POL="Wymiar" C_CHI="分析元类型" 
+C_ARB="نوع البعد" C_AUS="Dimension type"/>
+<FLD NAM="C2" MOD="Display" TYP="Char" LEN="30" C_FRA="Intitulé" C_ENG="Description" C_ITA="Descrizione" 
+C_POR="Descr." C_SPA="Descripción" C_BRI="Description" C_GER="Bezeichnung" C_POL="Opis" C_CHI="标题" 
+C_ARB="العنوان" C_AUS="Description"/>
+<FLD NAM="C3" MOD="Display" TYP="Char" LEN="30" C_FRA="Intitulé court" C_ENG="Short description" 
+C_ITA="Descr. breve" C_POR="Desc. curta" C_SPA="Descrip. corta" C_BRI="Short title" 
+C_GER="Kurzbezeichnung" C_POL="Krótki tytuł" C_CHI="简称" C_ARB="وصف قصير" C_AUS="Short description"/>
+</GRP>
+ </ADXKEY>
+ <ADXMEN>
+<MNU NO="1">
+<VAL IND="1" C_FRA="Non" C_ENG="No" C_ITA="No" C_POR="Não" C_SPA="No" C_BRI="No" C_GER="Nein" 
+C_POL="Nie" C_CHI="否" C_ARB="كلا" C_AUS="No"/>
+<VAL IND="2" C_FRA="Oui" C_ENG="Yes" C_ITA="Si" C_POR="Sim" C_SPA="Sí" C_BRI="Yes" C_GER="Ja" 
+C_POL="Tak" C_CHI="是" C_ARB="نعم" C_AUS="Yes"/>
+</MNU>
+<MNU NO="2650">
+<VAL IND="1" C_FRA="Section pour écriture d'arrondi" C_ENG="Intermediate dimension for allocation" 
+C_ITA="Sezione intermedia per ripartizione" C_POR="Secção intermédia para repartição" 
+C_SPA="Sección para apunte de redondeo" C_BRI="Intermediate dimension for allocation" 
+C_GER="Sektor für Rundungsbuchung" C_POL="Pośredni wymiar dla alokacji" C_CHI="取整分录分析元" 
+C_ARB="قسم للكتابة التقريبية" C_AUS="Intermediate dimension for allocation"/>
+</MNU>
+ </ADXMEN>
+ <ADXSER>
+<MET ID="READ" C_FRA="Lire" C_ENG="Read" C_ITA="Leggi" C_POR="Ler" C_SPA="Leer" C_BRI="Read" 
+C_GER="Lesen" C_POL="Odczyt" C_CHI="读取" C_ARB="قراءة" C_AUS="Read"/>
+<MET ID="CREATE" C_FRA="Créer" C_ENG="Create" C_ITA="Crea" C_POR="Criar" C_SPA="Crear" C_BRI="Create" 
+C_GER="Anlegen" C_POL="Utwórz" C_CHI="创建" C_ARB="خلق" C_AUS="Create"/>
+<MET ID="MODIFY" C_FRA="Modifier" C_ENG="Modify" C_ITA="Modifica" C_POR="Modificar" C_SPA="Modificar" 
+C_BRI="Modify" C_GER="Ändern" C_POL="Modyfikuj" C_CHI="修改" C_ARB="تعديل" C_AUS="Modify"/>
+<MET ID="DELETE" C_FRA="Supprimer" C_ENG="Delete" C_ITA="Elimina" C_POR="Suprimir" C_SPA="Borrar" 
+C_BRI="Delete" C_GER="Löschen" C_POL="Usuń" C_CHI="删除" C_ARB="إلغاء" C_AUS="Delete"/>
+<MET ID="LIST" C_FRA="Liste" C_ENG="List" C_ITA="Lista" C_POR="Lista" C_SPA="Lista" C_BRI="List" 
+C_GER="Liste" C_POL="Lista" C_CHI="列表" C_ARB="لائحة" C_AUS="List"/>
+ </ADXSER>
+<ADXREAD TAB="GDIE"><GRP DIM="1" NAM="KEYS">
+<FLD NAM="DIE" TYP="Char" MOD="Input" LEN="3" C_FRA="Axe" C_ENG="Dimension type" C_ITA="Asse" 
+C_POR="Eixo" C_SPA="Eje" C_BRI="Dimension type" C_GER="Dimension" C_POL="Wymiar" C_CHI="分析元类型" 
+C_ARB="نوع البعد" C_AUS="Dimension type"/>
+ </GRP></ADXREAD>
+</ADXDOC>

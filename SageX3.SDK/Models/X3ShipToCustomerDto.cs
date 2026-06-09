@@ -3,8 +3,8 @@ using SageX3.SDK.Core;
 namespace SageX3.SDK.Models;
 
 /// <summary>
-/// Sage X3 Ship-to Customer object BPD. Web service public name: S300STCRM.
-/// Source metadata file: S300STCRM.xml.
+/// Sage X3 Ship-to Customer object BPD. Web service public name: S300BPD.
+/// Source metadata file: S300BPD.xml.
 /// </summary>
 public sealed class X3ShipToCustomerDto
 {

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ADXDOC PNA="S300PER" NAM="OPER" TIM="20260609171802" OBJ="PER" FOL="SEED" SOL="X3ERPV12" 
+WRP="WJS300PER" USER="ERPUS" VER="6.30" HEAD="1">
+ <ADXDATA>
+<GRP NAM="PER1_1" TYB="List" DIM="1">
+<FLD NAM="CPY" X3BLORIG="PER1_1" X3FLORIG="CPY" IDX="1" TYP="Char" MOD="Input" LEN="5" C_FRA="Société" 
+C_ENG="Company" C_ITA="Società" C_POR="Socied." C_SPA="Sociedad" C_BRI="Company" C_GER="Unternehmen" 
+C_POL="Firma" C_CHI="公司" C_ARB="الشركة" C_AUS="Company"/>
+<FLD NAM="ZCPY" X3BLORIG="PER1_1" X3FLORIG="ZCPY" IDX="2" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="LEDTYP" X3BLORIG="PER1_1" X3FLORIG="LEDTYP" IDX="3" TYP="Integer" MEN="2644" MOD="Input" 
+LEN="15" C_FRA="Type de grand-livre" C_ENG="General ledger type" C_POR="Tipo de razão da contabilidade" 
+C_SPA="Tipo libro mayor" C_BRI="General ledger type" C_GER="Hauptbuchungskreistyp" 
+C_POL="Typ księgi głównej" C_CHI="总账类型" C_AUS="General ledger type"/>
+<FLD NAM="FIYNUM" X3BLORIG="PER1_1" X3FLORIG="FIYNUM" IDX="4" TYP="Integer" MOD="Input" LEN="2" 
+C_FRA="Exercice" C_ENG="Fiscal year" C_ITA="Esercizio" C_POR="Exercício" C_SPA="Ejercicio" 
+C_BRI="Fiscal year" C_GER="Geschäftsjahr" C_POL="Rok obrotowy" C_CHI="会计年度" C_ARB="السنة المالية" 
+C_AUS="Fiscal year"/>
+<FLD NAM="DES" X3BLORIG="PER1_1" X3FLORIG="DES" IDX="5" TYP="Char" MOD="Display" LEN="30"/>
+<FLD NAM="FIYSTR" X3BLORIG="PER1_1" X3FLORIG="FIYSTR" IDX="6" TYP="Date" MOD="Display" LEN="30" 
+C_FRA="Début exercice" C_ENG="Fiscal year start" C_ITA="Inizio esercizio" C_POR="Início exercício" 
+C_SPA="Inicio ejercicio" C_BRI="Fiscal Year Start" C_GER="Geschäftsjahresbeginn" C_POL="Od roku" 
+C_CHI="会计年度开始" C_ARB="بداية السنة المالية" C_AUS="Fiscal year start"/>
+<FLD NAM="FIYEND" X3BLORIG="PER1_1" X3FLORIG="FIYEND" IDX="7" TYP="Date" MOD="Display" LEN="30" 
+C_FRA="Fin exercice" C_ENG="Fiscal year end" C_ITA="Fine esercizio" C_POR="Fim exercício" 
+C_SPA="Fin ejercicio" C_BRI="Fiscal Year End" C_GER="Geschäftsjahresende" C_POL="Do roku" C_CHI="会计年度结束" 
+C_ARB="نهاية السنة المالية" C_AUS="Fiscal year end"/>
+<FLD NAM="FIYSTA" X3BLORIG="PER1_1" X3FLORIG="FIYSTA" IDX="8" TYP="Integer" MEN="2618" MOD="Display" 
+LEN="13" C_FRA="Etat exercice" C_ENG="Fiscal year status" C_ITA="Stato esercizio" 
+C_POR="Status exercício" C_SPA="Estado ejercicio" C_BRI="Fiscal Year Status" C_GER="Report" 
+C_POL="Status roku obrotowego" C_CHI="会计年度状态" C_ARB="وضع السنة المالية" C_AUS="Fiscal year status"/>
+</GRP>
+<GRP NAM="PER1_2" TYB="Table" DIM="28" IDTAB="PER1~BASTAB" OPT="IAD">
+<FLD NAM="PERNUM" X3BLORIG="PER1_2" X3FLORIG="PERNUM" IDX="10" TYP="Integer" MOD="Display" LEN="2" 
+C_FRA="No" C_ENG="No." C_ITA="N°" C_POR="Nr." C_SPA="N.º" C_BRI="Line No." C_GER="Nr." C_POL="Nr" 
+C_CHI="编号" C_ARB="الرقم" C_AUS="No."/>
+<FLD NAM="PERSTR" X3BLORIG="PER1_2" X3FLORIG="PERSTR" IDX="11" TYP="Date" MOD="Display" LEN="30" 
+C_FRA="Début période" C_ENG="Period start" C_ITA="Inizio periodo" C_POR="Período início" 
+C_SPA="Inicio periodo" C_BRI="Period Starting" C_GER="Periodenbeginn" C_POL="Okres od" C_CHI="会计期间开始" 
+C_ARB="بداية الفترة" C_AUS="Period start"/>
+<FLD NAM="PEREND" X3BLORIG="PER1_2" X3FLORIG="PEREND" IDX="12" TYP="Date" MOD="Input" LEN="30" 
+C_FRA="Fin période" C_ENG="Period end" C_ITA="Fine periodo" C_POR="Período fim" C_SPA="Fin periodo" 
+C_BRI="Period End" C_GER="Periodenende" C_POL="Okres do" C_CHI="会计期间结束" C_ARB="نهاية الفترة" 
+C_AUS="Period end"/>
+<FLD NAM="PERSTA" X3BLORIG="PER1_2" X3FLORIG="PERSTA" IDX="13" TYP="Integer" MEN="214" MOD="Display" 
+LEN="15" C_FRA="Etat période" C_ENG="Period status" C_ITA="Situazione periodo" C_POR="Lista período" 
+C_SPA="Estado periodo" C_BRI="Period Status" C_GER="Status Periode" C_POL="Status okresu" C_CHI="会计期间状态" 
+C_ARB="وضع الفترة" C_AUS="Period status"/>
+<FLD NAM="PERSTOSTA" X3BLORIG="PER1_2" X3FLORIG="PERSTOSTA" IDX="14" TYP="Integer" MEN="228" MOD="Input" 
+LEN="15" C_FRA="Statut stock" C_ENG="Stock status" C_ITA="Stato stock" C_POR="Status stock" 
+C_SPA="Estado stock" C_BRI="Stock Status" C_GER="Bestandsstatus" C_POL="Status stanów magazynowych" 
+C_CHI="存货状态" C_ARB="وضع المخزون" C_AUS="Stock status"/>
+<FLD NAM="CLODAT" X3BLORIG="PER1_2" X3FLORIG="CLODAT" IDX="15" TYP="Date" MOD="Display" LEN="30" 
+C_FRA="Date clôture" C_ENG="Closing date" C_ITA="Data chiusura" C_POR="Data fecho" C_SPA="Fecha cierre" 
+C_BRI="Closing Date" C_GER="Abschlussdatum" C_POL="Data zamknięcia" C_CHI="关闭日期" C_ARB="تاريخ الإغلاق" 
+C_AUS="Closing date"/>
+</GRP>
+<GRP NAM="ADXTEC" TYB="List" DIM="1">
+<FLD NAM="WW_MODSTAMP" TYP="Char" MOD="Input" LEN="20" IDX="16"/>
+<FLD NAM="WW_MODUSER" TYP="Char" MOD="Display" LEN="20" IDX="17"/>
+</GRP>
+ </ADXDATA>
+ <ADXKEY>
+<GRP NAM="LEFTLIST" DIM="10000">
+<FLD NAM="CPY" MOD="Display" TYP="Char" LEN="5" C_FRA="Société" C_ENG="Company" C_ITA="Società" 
+C_POR="Socied." C_SPA="Sociedad" C_BRI="Company" C_GER="Unternehmen" C_POL="Firma" C_CHI="公司" 
+C_ARB="الشركة" C_AUS="Company"/>
+<FLD NAM="LEDTYP" MOD="Display" MEN="2644" TYP="Char" LEN="30" C_FRA="Type de référentiel" 
+C_ENG="Ledger type" C_ITA="Tipo riferimento" C_POR="Tipo de referencial" C_SPA="Tipo de referencial" 
+C_BRI="Reference type" C_GER="Buchungskreis" C_POL="Typ księgi" C_CHI="账册类型" C_ARB="نوع المرجعية" 
+C_AUS="Ledger type"/>
+<FLD NAM="FIYNUM" MOD="Display" TYP="Char" LEN="2" C_FRA="Exercice" C_ENG="Fiscal year" 
+C_ITA="Esercizio" C_POR="Exercício" C_SPA="Ejercicio" C_BRI="Fiscal year" C_GER="Geschäftsjahr" 
+C_POL="Rok obrotowy" C_CHI="会计年度" C_ARB="السنة المالية" C_AUS="Fiscal year"/>
+<FLD NAM="DES" MOD="Display" TYP="Char" LEN="30" C_FRA="Intitulé" C_ENG="Description" 
+C_ITA="Descrizione" C_POR="Descr." C_SPA="Descripción" C_BRI="Description" C_GER="Bezeichnung" 
+C_POL="Opis" C_CHI="标题" C_ARB="العنوان" C_AUS="Description"/>
+</GRP>
+ </ADXKEY>
+ <ADXMEN>
+<MNU NO="214">
+<VAL IND="1" C_FRA="Non ouvert" C_ENG="Not open" C_ITA="Non aperto" C_POR="Não aberto" 
+C_SPA="No abierto" C_BRI="Not Open" C_GER="Nicht offen" C_POL="Nie otwarty" C_CHI="未开的" 
+C_ARB="غير مفتوح" C_AUS="Not open"/>
+<VAL IND="2" C_FRA="Ouvert" C_ENG="Open" C_ITA="Aperto" C_POR="Aberto" C_SPA="Abierto" C_BRI="Open" 
+C_GER="Offen" C_POL="Otwarty" C_CHI="开启的" C_ARB="مفتوح" C_AUS="Open"/>
+<VAL IND="3" C_FRA="Fermé" C_ENG="Closed" C_ITA="Chiuso" C_POR="Fechado" C_SPA="Cerrado" C_BRI="Closed" 
+C_GER="Geschlossen" C_POL="Zamknięty" C_CHI="关闭的" C_ARB="مغلق" C_AUS="Closed"/>
+</MNU>
+<MNU NO="228">
+<VAL IND="1" C_FRA="Direct" C_ENG="Open" C_ITA="Diretto" C_POR="Directo" C_SPA="Directo" C_BRI="Open" 
+C_GER="Direkt" C_POL="Otwarta" C_CHI="打开" C_ARB="مباشر" C_AUS="Open"/>
+<VAL IND="2" C_FRA="Différé" C_ENG="Deferred" C_ITA="Differito" C_POR="Diferido" C_SPA="Diferido" 
+C_BRI="Deferred" C_GER="Zeitversetzt" C_POL="Odroczona" C_CHI="延期" C_ARB="مختلف" C_AUS="Deferred"/>
+<VAL IND="3" C_FRA="Ajustement solde" C_ENG="Balance adjustment" C_ITA="Aggiustam. saldo" 
+C_POR="Ajustam. do saldo" C_SPA="Ajuste del saldo" C_BRI="Balance Adjustment" C_GER="Anpassung Saldo" 
+C_POL="Korekta bilansu" C_CHI="关闭调整" C_ARB="ضبط التوازن" C_AUS="Balance adjustment"/>
+<VAL IND="4" C_FRA="Interdit" C_ENG="Closed" C_ITA="Vietato" C_POR="Interdito" C_SPA="Prohibido" 
+C_BRI="Closed" C_GER="Unzulässig" C_POL="Zamknięta" C_CHI="关闭" C_ARB="ممنوع" C_AUS="Closed"/>
+</MNU>
+<MNU NO="2618">
+<VAL IND="1" C_FRA="Non ouvert" C_ENG="Not open" C_ITA="Non aperto" C_POR="Não aberto" 
+C_SPA="No abierto" C_BRI="Not open" C_GER="Nicht offen" C_POL="Nie otwarty" C_CHI="未打开的" 
+C_ARB="غير مفتوح" C_AUS="Not open"/>
+<VAL IND="2" C_FRA="Ouvert" C_ENG="Open" C_ITA="Aperto" C_POR="Aberto" C_SPA="Abierto" C_BRI="Open" 
+C_GER="Offen" C_POL="Otwarty" C_CHI="打开的" C_ARB="مفتوح" C_AUS="Open"/>
+<VAL IND="3" C_FRA="Fermé" C_ENG="Closed" C_ITA="Chiuso" C_POR="Fechado" C_SPA="Cerrado" C_BRI="Closed" 
+C_GER="Geschlossen" C_POL="Zamknięty" C_CHI="关闭的" C_ARB="مغلق" C_AUS="Closed"/>
+</MNU>
+<MNU NO="2644">
+<VAL IND="1" C_FRA="Social" C_ENG="Legal" C_ITA="Generale" C_POR="Social" C_SPA="Social" C_BRI="Legal" 
+C_GER="Hauptbuch" C_POL="Księga Główna" C_CHI="法定的" C_ARB="إجتماعي" C_AUS="Legal"/>
+<VAL IND="2" C_FRA="Analytique" C_ENG="Analytical" C_ITA="Analitico" C_POR="Analítico" C_SPA="Analítico" 
+C_BRI="Analytical" C_GER="Kostenrechnung" C_POL="Księga Analityczna (dodatkowa)" C_CHI="分析的" 
+C_ARB="تحليلي" C_AUS="Analytical"/>
+<VAL IND="3" C_FRA="IAS" C_ENG="IAS" C_ITA="IAS" C_POR="IAS" C_SPA="IAS" C_BRI="IAS" C_GER="IAS" 
+C_POL="MSR" C_CHI="国际会计标准" C_ARB="IAS" C_AUS="IAS"/>
+<VAL IND="4" C_FRA="Groupe" C_ENG="Group" C_ITA="PC 4" C_POR="Ref. 4" C_SPA="Ref 4" C_BRI="Ledg 4" 
+C_GER="Gruppe" C_POL="Dodatkowa księga 4" C_CHI="账册4" C_ARB="مرجع 4" C_AUS="Group"/>
+<VAL IND="5" C_FRA="Devise" C_ENG="Ledger 5" C_ITA="PC 5" C_POR="Ref. 5" C_SPA="Ref 5" C_BRI="Ledg 5" 
+C_GER="Buch 5" C_POL="Dodatkowa księga 5" C_CHI="账册5" C_ARB="مرجع 5" C_AUS="Ledger 5"/>
+<VAL IND="6" C_FRA="Réf 6" C_ENG="Ledger 6" C_ITA="PC 6" C_POR="Ref. 6" C_SPA="Ref 6" C_BRI="Ledg 6" 
+C_GER="Buch 6" C_POL="Dodatkowa księga 6" C_CHI="账册6" C_ARB="مرجع 6" C_AUS="Ledger 6"/>
+<VAL IND="7" C_FRA="Réf 7" C_ENG="Ledger 7" C_ITA="PC 7" C_POR="Ref. 7" C_SPA="Ref 7" C_BRI="Ledg 7" 
+C_GER="Buch 7" C_POL="Dodatkowa księga 7" C_CHI="账册7" C_ARB="مرجع 7" C_AUS="Ledger 7"/>
+<VAL IND="8" C_FRA="Réf 8" C_ENG="Ledger 8" C_ITA="PC 8" C_POR="Ref. 8" C_SPA="Ref 8" C_BRI="Ledg 8" 
+C_GER="Buch 8" C_POL="Dodatkowa księga 8" C_CHI="账册8" C_ARB="مرجع 8" C_AUS="Ledger 8"/>
+<VAL IND="9" C_FRA="Réf 9" C_ENG="Ledger 9" C_ITA="PC 9" C_POR="Ref. 9" C_SPA="Ref 9" C_BRI="Ledg 9" 
+C_GER="Buch 9" C_POL="Dodatkowa księga 9" C_CHI="账册9" C_ARB="مرجع 9" C_AUS="Ledger 9"/>
+<VAL IND="10" C_FRA="Réf 10" C_ENG="Ledger 10" C_ITA="PC 10" C_POR="Ref. 10" C_SPA="Ref 10" 
+C_BRI="Ledg 10" C_GER="Buch 10" C_POL="Dodatkowa księga 10" C_CHI="账册10" C_ARB="مرجع 10" 
+C_AUS="Ledger 10"/>
+</MNU>
+ </ADXMEN>
+ <ADXSER>
+<MET ID="READ" C_FRA="Lire" C_ENG="Read" C_ITA="Leggi" C_POR="Ler" C_SPA="Leer" C_BRI="Read" 
+C_GER="Lesen" C_POL="Odczyt" C_CHI="读取" C_ARB="قراءة" C_AUS="Read"/>
+<MET ID="CREATE" C_FRA="Créer" C_ENG="Create" C_ITA="Crea" C_POR="Criar" C_SPA="Crear" C_BRI="Create" 
+C_GER="Anlegen" C_POL="Utwórz" C_CHI="创建" C_ARB="خلق" C_AUS="Create"/>
+<MET ID="MODIFY" C_FRA="Modifier" C_ENG="Modify" C_ITA="Modifica" C_POR="Modificar" C_SPA="Modificar" 
+C_BRI="Modify" C_GER="Ändern" C_POL="Modyfikuj" C_CHI="修改" C_ARB="تعديل" C_AUS="Modify"/>
+<MET ID="DELETE" C_FRA="Supprimer" C_ENG="Delete" C_ITA="Elimina" C_POR="Suprimir" C_SPA="Borrar" 
+C_BRI="Delete" C_GER="Löschen" C_POL="Usuń" C_CHI="删除" C_ARB="إلغاء" C_AUS="Delete"/>
+<MET ID="LIST" C_FRA="Liste" C_ENG="List" C_ITA="Lista" C_POR="Lista" C_SPA="Lista" C_BRI="List" 
+C_GER="Liste" C_POL="Lista" C_CHI="列表" C_ARB="لائحة" C_AUS="List"/>
+ </ADXSER>
+<ADXREAD TAB="FISCALYEAR"><GRP DIM="1" NAM="KEYS">
+<FLD NAM="CPY" TYP="Char" MOD="Input" LEN="5" C_FRA="Société" C_ENG="Company" C_ITA="Società" 
+C_POR="Socied." C_SPA="Sociedad" C_BRI="Company" C_GER="Unternehmen" C_POL="Firma" C_CHI="公司" 
+C_ARB="الشركة" C_AUS="Company"/>
+<FLD NAM="LEDTYP" MEN="2644" TYP="Integer" MOD="Input" C_FRA="Type de référentiel" C_ENG="Ledger type" 
+C_ITA="Tipo riferimento" C_POR="Tipo de referencial" C_SPA="Tipo de referencial" C_BRI="Reference type" 
+C_GER="Buchungskreis" C_POL="Typ księgi" C_CHI="账册类型" C_ARB="نوع المرجعية" C_AUS="Ledger type"/>
+<FLD NAM="FIYNUM" TYP="Integer" MOD="Input" C_FRA="Numéro exercice" C_ENG="Fiscal year number" 
+C_ITA="Nr esercizio" C_POR="Número exercício" C_SPA="Número ejercicio" C_BRI="Fiscal Year Number" 
+C_GER="Geschäftsjahresnr." C_POL="Numer roku obrotowego" C_CHI="会计年度号" C_ARB="رقم السنة المالية" 
+C_AUS="Fiscal year number"/>
+ </GRP></ADXREAD>
+</ADXDOC>

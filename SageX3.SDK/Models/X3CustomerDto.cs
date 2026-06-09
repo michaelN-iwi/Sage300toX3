@@ -3,8 +3,9 @@ using SageX3.SDK.Core;
 namespace SageX3.SDK.Models;
 
 /// <summary>
-/// Sage X3 Customer object BPC. Web service public name: S300CRM.
-/// Source metadata file: S300CRM.xml.
+/// Sage X3 Customer object BPC. Web service public name: S300BPC.
+/// Source metadata file: S300BPC.xml.
+/// Customer optional fields are embedded in S300BPC using YOPTBPC/YOPTBPCV dimensional fields.
 /// </summary>
 public sealed class X3CustomerDto
 {
@@ -58,8 +59,17 @@ public sealed class X3CustomerDto
     public string? PaymentBank { get; set; }           // PAYBAN
     public string? ReminderGroup { get; set; }         // GRP
 
-    public string ToX3Xml()
+    /// <summary>
+    /// Customer optional fields embedded in S300BPC.
+    /// Key maps to YOPTBPC and value maps to YOPTBPCV.
+    /// The generated IDX position keeps code/value aligned.
+    /// </summary>
+    public Dictionary<string, string?> OptionalFields { get; set; } = new();
+
+    public string ToX3Xml(int optionalFieldCapacity = 9)
     {
+        Validate(optionalFieldCapacity);
+
         var addressCountry = AddressCountry ?? Country;
         var addressDescription = AddressDescription ?? NameLine1;
         var billTo = BillToCustomer ?? CustomerNumber;
@@ -67,57 +77,82 @@ public sealed class X3CustomerDto
         var groupCustomer = GroupCustomer ?? CustomerNumber;
         var riskCustomer = RiskCustomer ?? CustomerNumber;
 
-        return new SageX3XmlBuilder()
-     .BeginObject()
-         .BeginGroup("BPC0_1")
-             .Field("BCGCOD", CategoryCode)
-             .Field("BPCSTA", IsActive)
-             .Field("BPCNUM", CustomerNumber)
-         .EndGroup()
-         .BeginGroup("BPRC_1")
-             .Field("BPRSHO", ShortDescription)
-             .Field("BPRLOG", Acronym)
-             .Field("BPRNAM", NameLine1, 1)
-             .Field("BPRNAM", NameLine2, 2)
-             .Field("CRY", Country)
-             .Field("SUBTOTAX", SubjectToTax)
-             .Field("LAN", Language)
-             .Field("CUR", Currency)
-             .Field("CRN", TaxIdNumber)
-             .Field("NAF", SicCode)
-             .Field("EECNUM", EuVatNumber)
-         .EndGroup()
-         .BeginTable("BPAC_1", 1)
-             .BeginLine(1)
-                 .Field("CODADR", AddressCode)
-                 .Field("BPADES", addressDescription)
-                 .Field("BPACRY", addressCountry)
-                 .Field("ADDLIG1", AddressLine1)
-                 .Field("ADDLIG2", AddressLine2)
-                 .Field("ADDLIG3", AddressLine3)
-                 .Field("POSCOD", PostalCode)
-                 .Field("CTY", City)
-                 .Field("SAT", StateProvince)
-                 .Field("TEL1", Phone1)
-                 .Field("TEL2", Phone2)
-                 .Field("WEB1", Email1)
-                 .Field("WEB2", Email2)
-                 .Field("FCYWEB", Website)
-                 .Field("EXTNUM", ExternalIdentifier)
-                 .Field("BPAADDFLG", IsDefaultAddress)
-             .EndLine()
-         .EndTable()
-         .BeginGroup("BPC3_2")
-             .Field("VACBPR", TaxRule)
-         .EndGroup()
-         .BeginGroup("BPC3_3")
-             .Field("PTE", PaymentTerm)
-         .EndGroup()
-     .EndObject()
-     .Build();
+        var builder = new SageX3XmlBuilder()
+            .BeginObject()
+                .BeginGroup("BPC0_1")
+                    .Field("BCGCOD", CategoryCode)
+                    .Field("BPCSTA", IsActive)
+                    .Field("BPCNUM", CustomerNumber)
+                .EndGroup()
+                .BeginGroup("BPRC_1")
+                    .Field("BPRSHO", ShortDescription)
+                    .Field("BPRLOG", Acronym)
+                    .Field("BPRNAM", NameLine1, 1)
+                    .Field("BPRNAM", NameLine2, 2)
+                    .Field("CRY", Country)
+                    .Field("SUBTOTAX", SubjectToTax)
+                    .Field("LAN", Language)
+                    .Field("CUR", Currency)
+                    .Field("CRN", TaxIdNumber)
+                    .Field("NAF", SicCode)
+                    .Field("EECNUM", EuVatNumber)
+                .EndGroup()
+                .BeginTable("BPAC_1", 1)
+                    .BeginLine(1)
+                        .Field("CODADR", AddressCode)
+                        .Field("BPADES", addressDescription)
+                        .Field("BPACRY", addressCountry)
+                        .Field("ADDLIG1", AddressLine1)
+                        .Field("ADDLIG2", AddressLine2)
+                        .Field("ADDLIG3", AddressLine3)
+                        .Field("POSCOD", PostalCode)
+                        .Field("CTY", City)
+                        .Field("SAT", StateProvince)
+                        .Field("TEL1", Phone1)
+                        .Field("TEL2", Phone2)
+                        .Field("WEB1", Email1)
+                        .Field("WEB2", Email2)
+                        .Field("FCYWEB", Website)
+                        .Field("EXTNUM", ExternalIdentifier)
+                        .Field("BPAADDFLG", IsDefaultAddress)
+                    .EndLine()
+                .EndTable()
+                .BeginGroup("BPC2_1")
+                    .Field("BPCTYP", CustomerType)
+                    .Field("CHGTYP", RateType)
+                .EndGroup()
+                .BeginGroup("BPC2_2")
+                    .Field("OSTCTL", CreditControl)
+                    .Field("WOSTAUZ", AuthorizedCredit)
+                .EndGroup()
+                .BeginGroup("BPC3_1")
+                    .Field("BPCINV", billTo)
+                    .Field("BPAINV", AddressCode)
+                    .Field("BPCPYR", payBy)
+                    .Field("BPAPYR", AddressCode)
+                    .Field("BPCGRU", groupCustomer)
+                    .Field("BPCRSK", riskCustomer)
+                    .Field("ACCCOD", AccountingCode)
+                    .Field("DIA", AccountStructure)
+                .EndGroup()
+                .BeginGroup("BPC3_2")
+                    .Field("VACBPR", TaxRule)
+                .EndGroup()
+                .BeginGroup("BPC3_3")
+                    .Field("PTE", PaymentTerm)
+                    .Field("DEP", SettlementDiscount)
+                    .Field("PAYBAN", PaymentBank)
+                    .Field("GRP", ReminderGroup)
+                .EndGroup();
+
+        AppendOptionalFields(builder, optionalFieldCapacity);
+
+        return builder
+            .EndObject()
+            .Build();
     }
 
-    public void Validate()
+    public void Validate(int optionalFieldCapacity = 9)
     {
         Required(CustomerNumber, nameof(CustomerNumber));
         Required(CategoryCode, nameof(CategoryCode));
@@ -126,10 +161,12 @@ public sealed class X3CustomerDto
         Required(Country, nameof(Country));
         Required(Language, nameof(Language));
         Required(Currency, nameof(Currency));
+        Required(TaxIdNumber, nameof(TaxIdNumber));
         Required(AddressCode, nameof(AddressCode));
         Required(AddressCountry ?? Country, nameof(AddressCountry));
         Required(TaxRule, nameof(TaxRule));
         Required(PaymentTerm, nameof(PaymentTerm));
+        Required(AccountingCode, nameof(AccountingCode));
 
         Max(CustomerNumber, 15, nameof(CustomerNumber));
         Max(CategoryCode, 5, nameof(CategoryCode));
@@ -140,13 +177,61 @@ public sealed class X3CustomerDto
         Max(Country, 3, nameof(Country));
         Max(Language, 3, nameof(Language));
         Max(Currency, 3, nameof(Currency));
+        Max(TaxIdNumber, 20, nameof(TaxIdNumber));
         Max(AddressCode, 5, nameof(AddressCode));
+        Max(AddressDescription, 30, nameof(AddressDescription));
+        Max(AddressCountry, 3, nameof(AddressCountry));
         Max(AddressLine1, 50, nameof(AddressLine1));
+        Max(AddressLine2, 50, nameof(AddressLine2));
+        Max(AddressLine3, 50, nameof(AddressLine3));
         Max(City, 40, nameof(City));
         Max(StateProvince, 35, nameof(StateProvince));
         Max(PostalCode, 10, nameof(PostalCode));
         Max(TaxRule, 5, nameof(TaxRule));
         Max(PaymentTerm, 15, nameof(PaymentTerm));
+        Max(AccountingCode, 10, nameof(AccountingCode));
+
+        if (optionalFieldCapacity < 0)
+            throw new InvalidOperationException("Customer optional field capacity cannot be negative.");
+
+        if (OptionalFields.Count > optionalFieldCapacity)
+            throw new InvalidOperationException(
+                $"Customer supports a maximum of {optionalFieldCapacity} optional fields, but {OptionalFields.Count} were provided.");
+
+        foreach (var optionalField in OptionalFields)
+        {
+            Required(optionalField.Key, "OptionalFields.Code");
+            Max(optionalField.Key, 50, $"OptionalFields[{optionalField.Key}].Code");
+            Max(optionalField.Value, 100, $"OptionalFields[{optionalField.Key}].Value");
+        }
+    }
+
+    private void AppendOptionalFields(SageX3XmlBuilder builder, int optionalFieldCapacity)
+    {
+        if (optionalFieldCapacity <= 0)
+            return;
+
+        var entries = OptionalFields.ToList();
+
+        builder.BeginGroup("YOPTBPC_1");
+        builder.BeginList("YOPTBPC", optionalFieldCapacity);
+        for (var index = 0; index < optionalFieldCapacity; index++)
+        {
+            var code = index < entries.Count ? entries[index].Key : string.Empty;
+            builder.ListItem(code);
+        }
+        builder.EndList();
+        builder.EndGroup();
+
+        builder.BeginGroup("YOPTBPC_2");
+        builder.BeginList("YOPTBPCV", optionalFieldCapacity);
+        for (var index = 0; index < optionalFieldCapacity; index++)
+        {
+            var value = index < entries.Count ? entries[index].Value : string.Empty;
+            builder.ListItem(value);
+        }
+        builder.EndList();
+        builder.EndGroup();
     }
 
     private static void Required(string? value, string fieldName)
