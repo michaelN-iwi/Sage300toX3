@@ -7,4 +7,10 @@ public sealed class MigrationOptions
     public bool ContinueOnError { get; init; } = true;
 
     public string LogFolder { get; init; } = "Logs";
+
+    /// <summary>
+    /// Maximum number of Customer optional fields supported by the current S300BPC web service.
+    /// This value depends on the DIM configured in the X3 web service metadata for YOPTBPC/YOPTBPCV.
+    /// </summary>
+    public int CustomerOptionalFieldCapacity { get; init; } = 9;
 }

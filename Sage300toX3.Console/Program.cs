@@ -32,57 +32,72 @@ Console.WriteLine($"Sage 300 Company : {sage300Options.Company}");
 Console.WriteLine($"Sage X3 PoolAlias : {sageX3Options.PoolAlias}");
 Console.WriteLine($"Sage X3 Language  : {sageX3Options.Language}");
 Console.WriteLine($"Batch Size        : {migrationOptions.BatchSize}");
+Console.WriteLine($"Customer Optional Field Capacity : {migrationOptions.CustomerOptionalFieldCapacity}");
 Console.WriteLine();
 
 using var httpClient = new HttpClient();
 var x3WebServiceClient = new SageX3WebServiceClient(httpClient, sageX3Options);
 
 var categoryService = new X3CustomerCategoryService(x3WebServiceClient);
-var customerService = new X3CustomerService(x3WebServiceClient);
+var customerService = new X3CustomerService(
+    x3WebServiceClient,
+    migrationOptions.CustomerOptionalFieldCapacity);
 var shipToCustomerService = new X3ShipToCustomerService(x3WebServiceClient);
 
 Console.WriteLine("X3 services ready:");
-Console.WriteLine("- S300CRMCAT  Customer Category");
-Console.WriteLine("- S300CRM     Customer");
-Console.WriteLine("- S300STCRM   Ship-to Customer / BPD");
+Console.WriteLine("- S300BCG  Customer Category");
+Console.WriteLine("- S300BPC     Customer, including embedded optional fields");
+Console.WriteLine("- S300BPD  Ship-to Customer / BPD");
 Console.WriteLine();
 
-Console.WriteLine("Running X3 smoke test: S300STCRM...");
+Console.WriteLine("Running X3 smoke test: S300BPC...");
 
-var shipTo = new X3ShipToCustomerDto
+var customer = new X3CustomerDto
 {
-    CustomerNumber = "TSTCUST03",
-    ShipToCode = "002",
-
+    CustomerNumber = "TSTCUST08",
+    CategoryCode = "TST",
     IsActive = 2,
-    Language = "ENG",
-    NameLine1 = "Test Ship-to 02",
 
-    TaxRule = "ON",
+    ShortDescription = "TEST08",
+    Acronym = "TEST08",
+    NameLine1 = "Test Customer 08",
 
-    AddressDescription = "Ship Address",
     Country = "CA",
-    AddressLine1 = "456 Ship Street",
+    AddressCountry = "CA",
+    Language = "ENG",
+    Currency = "CAD",
+    TaxIdNumber = "999999999",
+
+    AddressCode = "001",
+    AddressDescription = "Main Address",
+    AddressLine1 = "123 Test Street",
     City = "Toronto",
     StateProvince = "ON",
-    PostalCode = "M2M2M2",
+    PostalCode = "M1M1M1",
 
-    Phone1 = "4165551234",
-    Email1 = "shipto@test.com"
+    TaxRule = "ON",
+    PaymentTerm = "NET30",
+    AccountingCode = "STD",
+
+    OptionalFields = new Dictionary<string, string?>
+    {
+        ["S300GROUP"] = "RETAIL",
+        ["S300REGION"] = "ONTARIO",
+        ["S300TYPE"] = "CORPORATE",
+        ["S300SOURCE"] = "SAGE300",
+        ["S300STATUS"] = "ACTIVE"
+    }
 };
 
-Console.WriteLine(shipTo.ToX3Xml());
+Console.WriteLine(customer.ToX3Xml());
 
-var shipToResult = await shipToCustomerService.SaveAsync(shipTo);
+var customerResult =
+    await customerService.SaveAsync(customer);
 
-Console.WriteLine("Success : " + shipToResult.Success);
-Console.WriteLine("Status  : " + shipToResult.Status);
-Console.WriteLine("Error   : " + shipToResult.ErrorMessage);
-
-Console.WriteLine();
-Console.WriteLine("Result XML:");
-Console.WriteLine(shipToResult.ResultXml);
+Console.WriteLine("Success : " + customerResult.Success);
+Console.WriteLine("Status  : " + customerResult.Status);
+Console.WriteLine("Error   : " + customerResult.ErrorMessage);
 
 Console.WriteLine();
 Console.WriteLine("Raw Response:");
-Console.WriteLine(shipToResult.RawResponse);
+Console.WriteLine(customerResult.RawResponse);
