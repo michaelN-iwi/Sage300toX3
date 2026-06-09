@@ -1,0 +1,17 @@
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\Migration.Core.deps.json
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\Migration.Core.dll
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\Migration.Core.pdb
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\Sage300API.SDK.dll
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\SageX3.SDK.dll
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\Sage300API.SDK.pdb
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\bin\Debug\net10.0\SageX3.SDK.pdb
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.csproj.AssemblyReference.cache
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.AssemblyInfoInputs.cache
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.AssemblyInfo.cs
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.csproj.CoreCompileInputs.cache
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migratio.CF703285.Up2Date
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.dll
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\refint\Migration.Core.dll
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\Migration.Core.pdb
+D:\Projects\IWIProjects\Sage300toX3_updated_mapping_validation_transformation\Sage300toX3\Migration.Core\obj\Debug\net10.0\ref\Migration.Core.dll
